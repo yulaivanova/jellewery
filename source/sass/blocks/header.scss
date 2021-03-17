@@ -5,12 +5,14 @@
 }
 
 .header__inner {
-  padding: 30px 98px;
+  @include center-block;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (max-width: $tablet-width) {
     padding: 30px 45px;

@@ -12,7 +12,7 @@
 
 .search__icon {
   fill: $text-color;
-  padding-right: 15px;
+  padding-right: 10px;
 
   @media (max-width: $tablet-width) {
     fill: $white;
@@ -31,7 +31,7 @@
 
   width: 100%;
 
-  padding: 5px 0;
+  padding: 5px 5px;
 
   &::placeholder {
     font-size: 14px;
