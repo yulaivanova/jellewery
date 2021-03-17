@@ -1,0 +1,53 @@
+.user-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-link__item {
+  margin-right: 35px;
+
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  color: $text-color;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:hover .user-link__icon,
+    &:focus .user-link__icon,
+    &:active .user-link__icon {
+      opacity: 0.7;
+    }
+  }
+}
+
+.user-link__icon {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    fill: none;
+    stroke: $text-color;
+  }
+}
+
+.user-link__item--login {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-link__item--cart span {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
