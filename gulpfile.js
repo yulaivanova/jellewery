@@ -99,17 +99,17 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-// gulp.task("vendor-scripts", function () {
-//   return gulp.src(["source/js/swiper-bundle.min.js",'source/js/modernizr-custom.js'])
-//     .pipe(concat("vendor.js"))
-//     .pipe(gulp.dest("build/js"));
-// });
+gulp.task("vendor-scripts", function () {
+  return gulp.src(["source/js/swiper-bundle.min.js",'source/js/modernizr-custom.js'])
+    .pipe(concat("vendor.js"))
+    .pipe(gulp.dest("build/js"));
+});
 
 gulp.task("main-scripts", function () {
-  return gulp.src(["source/js/menu.js"])
+  return gulp.src(["source/js/menu.js", "source/js/slider.js", "source/js/tabs.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "main-scripts", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "images", "webp", "css", "main-scripts", "vendor-scripts", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
