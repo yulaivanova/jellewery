@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 19px;
 
   @media (max-width: $tablet-width) {
     padding: 30px 45px;
@@ -25,6 +25,11 @@
 
 .header__site-nav {
   width: 100%;
+  border-top: 1px solid #f6f5f4;
+
+  @media (max-width: $tablet-width) {
+    border-top: none;
+  }
 }
 
 .header__inner form {

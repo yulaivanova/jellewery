@@ -1,0 +1,155 @@
+.questions {
+  @include center-block;
+
+  max-width: 1010px;
+  padding-bottom: 108px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 84px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.questions h2 {
+  text-align: center;
+  font-family: $CormorantGaramond;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+
+  margin: 0;
+
+  padding-bottom: 60px;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.questions__list {
+  @include list-reset;
+}
+
+.questions__item {
+  border-top: 1px solid $brown;
+  border-left: 1px solid $brown;
+  border-right: 1px solid $brown;
+
+  &:last-child {
+    border-bottom: 1px solid $brown;
+  }
+}
+
+.questions__content {
+  margin-top: -2px;
+
+  height: 0;
+  overflow: hidden;
+
+  transition: height 0.5s ease-in-out;
+}
+
+.questions__content p{
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+
+  max-width: 527px;
+
+  margin: 0;
+
+  padding-left: 50px;
+
+  @media (max-width: $tablet-width) {
+    line-height: 21px;
+
+    max-width: 100%;
+
+    padding-right: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
+    padding-right: 61px;
+  }
+}
+
+.questions__title {
+  position: relative;
+  width: 100%;
+  padding: 50px 0 50px 38px;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+
+  text-align: left;
+  font-size: 18px;
+  line-height: 23px;
+
+  &:focus {
+    outline: none;
+    color: $brown;
+  }
+
+  &:active,
+  &:hover {
+    color: $brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 25px 60px 25px 25px;
+  }
+}
+
+.questions__title:after {
+  content: '';
+  position: absolute;
+  right: 50px;
+  top: calc(50% - 14px);
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid;
+  border-color: transparent $brown $brown transparent;
+
+  transform: rotate(45deg);
+  transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
+
+  @media (max-width: $tablet-width) {
+    width: 15px;
+    height: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: 25px;
+
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.questions__title--active {
+  padding-bottom: 20px;
+}
+
+.questions__content--active {
+  height: auto;
+
+  padding-bottom: 49px;
+}
+
+.questions__title--active:after {
+  top: 50%;
+
+  border-color: $brown transparent transparent $brown;
+}
