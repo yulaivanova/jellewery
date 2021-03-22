@@ -1,6 +1,9 @@
 'use strict';
 (function () {
 
+  const CATALOG = document.querySelector('.catalog');
+  const INDEX_SLIDER = document.querySelector('.slider--index');
+
   function initSwiper() {
     let swiper = new Swiper('.swiper-container', {
       loop: true,
@@ -57,7 +60,33 @@
     });
   };
 
-  initSwiper();
+  function initCatalogSwiper() {
+    let swiper = new Swiper('.catalog__slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.catalog__button--next',
+        prevEl: '.catalog__button--prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  };
+
+  if (CATALOG) {
+    initCatalogSwiper();
+  }
+  
+  if (INDEX_SLIDER) {
+    initSwiper();
+  }
+  
 
 })();
 

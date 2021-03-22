@@ -100,13 +100,13 @@ gulp.task("clean", function () {
 });
 
 gulp.task("vendor-scripts", function () {
-  return gulp.src(["source/js/swiper-bundle.min.js",'source/js/modernizr-custom.js'])
+  return gulp.src(["source/js/swiper-bundle.min.js", 'source/js/modernizr-custom.js'])
     .pipe(concat("vendor.js"))
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("main-scripts", function () {
-  return gulp.src(["source/js/menu.js", "source/js/slider.js", "source/js/tabs.js"])
+  return gulp.src(["source/js/menu.js", "source/js/slider.js", "source/js/tabs.js", "source/js/popup.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });

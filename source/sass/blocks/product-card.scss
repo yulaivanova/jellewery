@@ -1,4 +1,8 @@
-.product-card img {
+.product-card {
+  text-align: center;
+}
+
+.slider .product-card img {
   width: 100%;
 
   @media (max-width: 1200px) {
@@ -12,6 +16,21 @@
 
   @media (max-width: $mobile-width) {
     min-height: 136px;
+  }
+}
+
+.catalog__slider .product-card img {
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $tablet-width) {
+    height: 208px;
+    width: 206px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 100%;
   }
 }
 

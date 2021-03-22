@@ -3,11 +3,14 @@
 
 'use strict';
 (function () {
-  const TABS = document.querySelectorAll('.questions__item');
-  const TABS_LIST = document.querySelector('.questions__list');
+  const TABS = document.querySelectorAll('.tabs__item');
+  const TABS_LIST = document.querySelector('.tabs');
+  const questions = document.querySelector('.questions');
+
+  TABS_LIST.classList.remove('tabs--nojs');
 
   TABS.forEach(elem => {
-    if (elem.children[1].classList.contains('questions__item--active')) {
+    if (elem.children[1].classList.contains('tabs__item--active')) {
       elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
     }
   });
@@ -15,31 +18,34 @@
   const openTabs = (button, dropDown) => {
     closeAllDrops();
     dropDown.style.height = dropDown.scrolHeight + 'px';
-    button.classList.add('questions__title--active');
-    dropDown.classList.add('questions__content--active');
+    button.classList.add('tabs__btn--active');
+    dropDown.classList.add('tabs__content--active');
   };
 
   const closeTabs = (button, dropDown) => {
-    button.classList.remove('questions__title--active');
-    dropDown.classList.remove('questions__content--active');
+    button.classList.remove('tabs__btn--active');
+    dropDown.classList.remove('tabs__content--active');
     dropDown.style.height = '';
   };
 
   const closeAllDrops = (button, dropDown) => {
-    TABS.forEach((elem) => {
-      if (elem.children[0] !== button && elem.children[1] !== dropDown) {
-        closeTabs(elem.children[0], elem.children[1]);
+    if (questions) {
+      TABS.forEach((elem) => {
+        if (elem.children[0] !== button && elem.children[1] !== dropDown) {
+          closeTabs(elem.children[0], elem.children[1]);
+        }
+      });
+    }
+  };
+  if (TABS_LIST) { 
+    TABS_LIST.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target.classList.contains('tabs__btn')) {
+        const parent = target.closest('.tabs__item');
+        const content = parent.querySelector('.tabs__content');
+        content.classList.contains('tabs__content--active') ? closeTabs(target, content) : openTabs(target, content);
       }
     });
-  };
-
-  TABS_LIST.addEventListener('click', (event) => {
-    const target = event.target;
-    if (target.classList.contains('questions__title')) {
-      const parent = target.closest('.questions__item');
-      const content = parent.querySelector('.questions__content');
-      content.classList.contains('questions__content--active') ? closeTabs(target, content) : openTabs(target, content);
-    }
-  });
+  }
 
 })();

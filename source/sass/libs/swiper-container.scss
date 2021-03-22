@@ -93,17 +93,9 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 130px;
   left: 0;
-  width: 100%;
-
-  @media (max-width: $tablet-width) {
-    bottom: 80px;
-  }
-
-  @media (max-width: $mobile-width) {
-    bottom: 80px;
-  }
+  width: 160px;
+  margin-left: calc(50% - 80px);
 }
 
 /* Bullets */
