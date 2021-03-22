@@ -62,7 +62,6 @@
 
     margin-top: 46px;
   }
-
 }
 
 .gallery__image {
@@ -93,8 +92,8 @@
 
 .gallery__item--2 {
   grid-column: 1;
-
   grid-row: 3/span 2;
+
   align-self: end;
 
   max-height: 154px;
@@ -108,10 +107,6 @@
 .gallery__item--3 {
   grid-column: 2/3;
   grid-row: 1/span 4;
-
-  @media (max-width: $tablet-width) {
-
-  }
 
   @media (max-width: $mobile-width) {
     max-height: 226px;

@@ -106,3 +106,15 @@
     right: 0;
   }
 }
+
+.slider__pagination {
+  bottom: 130px;
+
+  @media (max-width: $tablet-width) {
+    bottom: 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 80px;
+  }
+}

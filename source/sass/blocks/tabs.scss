@@ -1,0 +1,67 @@
+.tabs__content {
+  margin-top: -2px;
+
+  height: 0;
+  overflow: hidden;
+
+  transition: height 0.5s ease-in-out;
+}
+
+.tabs--nojs .tabs__content {
+  height: auto;
+}
+
+.tabs__content--active {
+  height: auto;
+}
+
+.tabs__content--active.questions__content {
+  padding-bottom: 49px;
+}
+
+.tabs__content--active.filter__content {
+  padding-top: 3px;
+}
+
+.tabs__btn {
+  position: relative;
+  width: 100%;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+    color: $brown;
+  }
+
+  &:active,
+  &:hover {
+    color: $brown;
+  }
+}
+
+.tabs__btn:after {
+  content: '';
+  position: absolute;
+
+  border: 1px solid;
+  border-color: transparent $brown $brown transparent;
+
+  transform: rotate(45deg);
+  transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+.tabs__btn--active:after {
+  border-color: $brown transparent transparent $brown;
+}
+
+.tabs__btn--active.questions__title {
+  padding-bottom: 20px;
+}
+
+.tabs__btn--active.questions__title::after {
+  top: 50%;
+}

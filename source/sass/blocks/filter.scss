@@ -1,0 +1,208 @@
+.filter__field {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+
+  border-top: 1px solid $brown;
+  border-left: 1px solid $brown;
+  border-right: 1px solid $brown;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 1px solid $brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $brown;
+  }
+}
+
+.filter__toggle {
+  padding: 28px 0 28px 25px;
+  text-align: left;
+
+  @media (max-width: $tablet-width) {
+    padding: 40px 0 40px 40px;
+  }
+}
+
+.filter__toggle:after {
+  right: 25px;
+  top: calc(50% - 10px);
+  width: 9px;
+  height: 9px;
+}
+
+.filter__content {
+  padding-left: 35px;
+}
+
+.filter__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 35px;
+}
+
+.filter__btn {
+  display: block;
+  width: 250px;
+  height: 68px;
+
+  background-color: $brown;
+  color: $white;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 362px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+  }
+}
+
+.filter__btn--reset {
+  background-color: $white;
+  color: $text-color;
+  border: 1px solid $brown;
+
+  margin-top: 25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.filter__link {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 100%;
+
+    background-color: $brown;
+    color: $white;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 28px 0;
+  }
+}
+
+.filter__popup {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.filter--opened {
+  @media (max-width: $tablet-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+    overflow-y: scroll;
+  }
+}
+
+.filter--opened .filter__link {
+  display:  none;
+}
+
+.filter--opened .filter__popup {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    position: absolute;
+    top: 29px;
+    left: -19px;
+    z-index: 99;
+
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 280px;
+    top: 60px;
+    left: calc(50% - 140px);
+  }
+}
+
+.filter__popup form {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.filter__close-toggle {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: -11px;
+    right: -15px;
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    background-color: $black;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+
+    z-index: 99;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    width: 18px;
+    height: 2px;
+
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -17px;
+  }
+}
+
+.filter__close-toggle:hover::before,
+.filter__close-toggle:hover::after,
+.filter__close-toggle:focus::before,
+.filter__close-toggle:focus::after {
+  opacity: 0.7;
+}
