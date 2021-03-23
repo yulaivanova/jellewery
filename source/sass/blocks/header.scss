@@ -1,3 +1,11 @@
+.header {
+  border-bottom: 1px solid #F6F5F4;
+
+  @media (max-width: $tablet-width) {
+    border-bottom: 0;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .header--opened {
     background-color: $brown;

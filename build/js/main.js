@@ -28,12 +28,15 @@
 })();
 'use strict';
 (function () {
+  const ENTER_KEY = 'Enter';
 
   const CATALOG = document.querySelector('.catalog');
-  const INDEX_SLIDER = document.querySelector('.slider--index');
+  const SLIDER = document.querySelector('.slider');
+  const PRODUCT = document.querySelector('.product__photos');
+  const GALLERY_ITEM = document.querySelectorAll('.photos__gallery label');
 
   function initSwiper() {
-    let swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.slider__wrapper', {
       loop: true,
       slidesPerView: 2,
       spaceBetween: 30,
@@ -107,14 +110,62 @@
     });
   };
 
+  function initProductSwiper() {
+    let swiper = new Swiper('.photos__slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: '.photos__pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + ' of ' + total;
+        },
+      },
+    });
+  };
+
+  function initMobileSwiper() {
+    let swiper = new Swiper('.slider__wrapper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: '.photos__pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + ' of ' + total;
+        },
+      },
+    });
+  };
+
+
   if (CATALOG) {
     initCatalogSwiper();
   }
   
-  if (INDEX_SLIDER) {
+  if (SLIDER) {
     initSwiper();
   }
-  
+
+  if (PRODUCT) {
+    initProductSwiper();
+  }
+
+  GALLERY_ITEM.forEach(item => {
+    item.addEventListener('keydown', function (evt) {
+      let target = evt.target.closest('label');
+      let inputId = target.getAttribute('for');
+      let input = document.getElementById(inputId);
+
+      if (evt.key === ENTER_KEY) {
+        input.checked = true;
+      }
+    });
+  });
 
 })();
 
@@ -127,8 +178,6 @@
   const TABS = document.querySelectorAll('.tabs__item');
   const TABS_LIST = document.querySelector('.tabs');
   const questions = document.querySelector('.questions');
-
-  TABS_LIST.classList.remove('tabs--nojs');
 
   TABS.forEach(elem => {
     if (elem.children[1].classList.contains('tabs__item--active')) {
@@ -159,6 +208,7 @@
     }
   };
   if (TABS_LIST) { 
+    TABS_LIST.classList.remove('tabs--nojs');
     TABS_LIST.addEventListener('click', (event) => {
       const target = event.target;
       if (target.classList.contains('tabs__btn')) {
@@ -222,6 +272,68 @@
       openPopup();
     });
   }
+
+
+})();
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
+'use strict';
+(function () {
+  /*  eslint no-var: "error"  */
+  /*  eslint-env es6  */
+
+  'use strict';
+
+  (function () {
+
+    const ENTER_KEY = 13;
+    const TAB_NAV = document.querySelectorAll('.tabs-nav__item');
+    const TABS = document.querySelector('.product__info');
+    const TAB_CONTENT = document.querySelectorAll('.product__content');
+    let tabName;
+
+    //TABS.classList.remove('tabs--nojs');
+
+    const onTabsClick = function () {
+      TAB_NAV.forEach(item => {
+        item.addEventListener('click', selectTabNav);
+        item.addEventListener('keydown', function (evt) {
+          tabName = this.getAttribute('data-tab-name');
+          if (evt.keyCode === ENTER_KEY) {
+            selectTabNavOnEnter(tabName);
+          }
+        });
+      });
+
+      function selectTabNavOnEnter() {
+        TAB_NAV.forEach(item => {
+          item.dataset.tabName === tabName ? item.classList.add('tabs-nav__item--is-active') : item.classList.remove('tabs-nav__item--is-active')
+        });
+        selectTabContent(tabName);
+      }
+
+      function selectTabNav() {
+        TAB_NAV.forEach(item => {
+          item.classList.remove('tabs-nav__item--is-active');
+        });
+        this.classList.add('tabs-nav__item--is-active');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+      }
+
+      function selectTabContent(tabName) {
+        TAB_CONTENT.forEach(item => {
+          item.classList.contains(tabName) ? item.classList.add('product__content--is-active') : item.classList.remove('product__content--is-active');
+        })
+      }
+    };
+    
+    if (TABS) {
+      onTabsClick();
+    }
+
+  })();
 
 
 })();

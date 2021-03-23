@@ -106,10 +106,10 @@ gulp.task("vendor-scripts", function () {
 });
 
 gulp.task("main-scripts", function () {
-  return gulp.src(["source/js/menu.js", "source/js/slider.js", "source/js/tabs.js", "source/js/popup.js"])
+  return gulp.src(["source/js/menu.js", "source/js/slider.js", "source/js/tabs.js", "source/js/popup.js", "source/js/product-tabs.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "images", "webp", "css", "main-scripts", "vendor-scripts", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "webp", "images", "css", "main-scripts", "vendor-scripts", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

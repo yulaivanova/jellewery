@@ -7,7 +7,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Jellewery">
-  <title>Jellewery</title>
+  <title>Gold Necklace</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/cormorant-garamond-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="anonymous">
@@ -30,15 +30,15 @@
             </svg></label>
           <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
         </form>
-        <a class="header__logo">
+        <a href="index.html" class="header__logo">
           <span class="visually-hidden">Jewellery Store</span>
           <svg class="header__logo-icon" width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
           </svg>
         </a>
         <div class="header__user-link user-link">
-          <a href="login.html" class="user-link__item user-link__item--login" tabindex="0">Login</a>
-          <a href="#" class="user-link__item user-link__item--cart" tabindex="0">
+          <a href="login.html" class="user-link__item user-link__item--login">Login</a>
+          <a href="#" class="user-link__item user-link__item--cart">
             <span>Cart 0</span>
             <svg class="user-link__icon" width="18" height="16">
               <use xlink:href="img/sprite_auto.svg#cart-icon"></use>
@@ -46,14 +46,14 @@
           </a>
         </div>
       </div>
-      <nav class="header__site-nav site-nav site-nav--opened site-nav--nojs" >
+      <nav class="header__site-nav site-nav site-nav--opened site-nav--nojs">
         <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">What’s new</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Chokers</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Necklaces</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link"  tabindex="0">Rings</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Earrings</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link">What’s new</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link">Chokers</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link">Necklaces</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link">Rings</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link">Earrings</a></li>
 
           <li class="site-nav__add-item"><a href="#" class="site-nav__link">About CH</a></li>
           <li class="site-nav__add-item"><a href="#" class="site-nav__link">Stores & Hours</a></li>
@@ -64,13 +64,159 @@
       </nav>
     </header>
     <main>
-      <section class="promo-block">
-        <h1 class="visually-hidden">Jellewery online shopping</h1>
-        <h2>PERFECTION</h2>
-        <p>made to be yours</p>
+      <section class="product">
+        <div class="product__photos photos">
+          <div class="photos__gallery">
+            <div class="photos__back"></div>
+            <input name="radiogal" type="radio" id="radiogal1" checked>
+            <div class="photos__item">
+              <picture>
+                <source type="image/webp" srcset="img/gold-necklace-1-full.webp">
+                <img src="img/gold-necklace-1-full.jpg" alt="gold necklace photo" width="470" height="435" />
+              </picture>
+            </div>
+            <label class="photos__view" for="radiogal1" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gold-necklace-preview1-tablet@1x.webp 1x, img/gold-necklace-preview1-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/gold-necklace-preview1-desktop@1x.webp 1x, img/gold-necklace-preview1-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/gold-necklace-preview1-tablet@1x.jpg 1x, img/gold-necklace-preview1-tablet@2x.jpg 2x">
+                <img src="img/gold-necklace-preview1-desktop@1x.jpg" srcset="img/gold-necklace-preview1-desktop@2x.jpg 2x"
+                  alt="gold necklace preview" width="100" height="125">
+              </picture>
+            </label>
+
+            <input name="radiogal" type="radio" id="radiogal2">
+            <div class="photos__item">
+              <picture>
+                <source type="image/webp" srcset="img/gold-necklace-2-full.webp">
+                <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/necklace-detail-tablet@1x.webp 1x, img/necklace-detail-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                    srcset="img/necklace-detail-tablet@1x.jpg 1x, img/necklace-detail-tablet@2x.jpg 2x">
+                <img src="img/gold-necklace-2-full.jpg" alt="gold necklace photo" width="470" height="435" />
+              </picture>
+            </div>
+            <label class="photos__view" for="radiogal2" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/gold-necklace-preview2-tablet@1x.webp 1x, img/gold-necklace-preview2-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/gold-necklace-preview2-desktop@1x.webp 1x, img/gold-necklace-preview2-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/gold-necklace-preview2-tablet@1x.jpg 1x, img/gold-necklace-preview2-tablet@2x.jpg 2x">
+                <img src="img/gold-necklace-preview2-desktop@1x.jpg"
+                  srcset="img/gold-necklace-preview2-desktop@2x.jpg 2x" alt="gold necklace preview" width="100" height="125">
+              </picture>
+            </label>
+          
+            <input name="radiogal" type="radio" id="radiogal3">
+            <div class="photos__item">
+              <picture>
+                <source type="image/webp" srcset="img/gold-necklace-3-full.webp">
+                <img src="img/gold-necklace-3-full.jpg" alt="gold necklace photo" width="470" height="435" />
+              </picture>
+            </div>
+            <label class="photos__view" for="radiogal3" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/pgold-necklace-preview3-tablet@1x.webp 1x, img/gold-necklace-preview3-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/gold-necklace-preview3-desktop@1x.webp 1x, img/gold-necklace-preview3-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/gold-necklace-preview3-tablet@1x.jpg 1x, img/gold-necklace-preview3-tablet@2x.jpg 2x">
+                <img src="img/gold-necklace-preview3-desktop@1x.jpg"
+                  srcset="img/gold-necklace-preview3-desktop@2x.jpg 2x" alt="gold necklace preview" width="100" height="125">
+              </picture>
+            </label>
+          </div>
+          <div class="swiper-container photos__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide photos__slide">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/necklace-detail-mobile@1x.webp 1x, img/necklace-detail-mobile@2x.webp 2x">
+                  <img src="img/necklace-detail-mobile@1x.jpg" srcset="img/necklace-detail-mobile@2x.jpg 2x"
+                    alt="Necklace gold photo" width="290" height="260">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__slide">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/necklace-detail-2-mobile@1x.webp 1x, img/necklace-detail-2-mobile@2x.webp 2x">
+                  <img src="img/necklace-detail-2-mobile@1x.jpg" srcset="img/necklace-detail-2-mobile@2x.jpg 2x"
+                    alt="Necklace gold photo" width="290" height="260">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__slide">
+                <picture>
+                  <source type="image/webp" srcset="img/necklace-detail-3-mobile@1x.webp 1x, img/necklace-detail-3-mobile@2x.webp 2x">
+                  <img src="img/necklace-detail-3-mobile@1x.jpg" srcset="img/necklace-detail-3-mobile@2x.jpg 2x"
+                    alt="Necklace gold photo" width="290" height="260">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__slide">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/necklace-detail-4-mobile@1x.webp 1x, img/necklace-detail-4-mobile@2x.webp 2x">
+                  <img src="img/necklace-detail-4-mobile@1x.jpg" srcset="img/necklace-detail-4-mobile@2x.jpg 2x"
+                    alt="Necklace gold photo" width="290" height="260">
+                </picture>
+              </div>
+            </div>
+            <div class="photos__pagination swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="product__descriptions">
+          <h1>Gold Necklace</h1>
+          <p>$ 115</p>
+
+          <div class="product__tabs-block">
+            <div class="tabs-nav">
+              <div class="tabs-nav__item" data-tab-name="desc" tabindex="0">Description
+              </div>
+              <div class="tabs-nav__item tabs-nav__item--is-active" data-tab-name="characteristic" tabindex="0">Additional info</div>
+            </div>
+            <div class="product__info">
+              <div class="product__content desc">
+                <p>
+                  Traced with over 100 round brilliant diamonds, this closed hinged bangle is designed with an iconic knife edge profile,
+                  a Tiffany code of the house since the introduction of the Tiffany® Setting engagement ring in 1886. Wearable emblems
+                  inspired by the Roman numerals on the iconic clock at the New York flagship store, the Atlas X collection is a reminder
+                  to take time into your own hands and treasure what matters most.
+                </p>
+              </div>
+              <div class="product__content product__content--is-active characteristic">
+                <table class="characteristic__table">
+                  <tr class="characteristic__row">
+                    <td>Metal type</td>
+                    <td>Gold 585</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Stone</td>
+                    <td>Turquoise</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Size</td>
+                    <td>18” / 20”</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <a href="#" class="product__button button button--brown">Add to cart</a>
+          </div>
+          <ul class="product__terms">
+            <li>14 Day Returns</li>
+            <li>2-Year Warranty</li>
+            <li>Free Shipping</li>
+          </ul>
+        </div> 
       </section>
+
       <section class="slider">
-        <h2>New In</h2>
+        <h2>You May Also Like</h2>
         <a href="catalog.html" class="slider__link link">Shop Now</a>
         <div class="swiper-container slider__wrapper">
           <div class="swiper-wrapper">
@@ -143,8 +289,8 @@
                       srcset="img/gold-layered-necklace-mobile@1x.jpg 1x, img/gold-layered-necklace-mobile@2x.jpg 2x">
                     <source media="(max-width: 1023px)"
                       srcset="img/gold-layered-necklace-tablet@1x.jpg 1x, img/pgold-layered-necklace-tablet@2x.jpg 2x">
-                    <img src="img/gold-layered-necklace-desktop@1x.jpg"
-                      srcset="img/gold-layered-necklace-desktop@2x.jpg 2x" alt="Gold chain" width="270" height="284">
+                    <img src="img/gold-layered-necklace-desktop@1x.jpg" srcset="img/gold-layered-necklace-desktop@2x.jpg 2x"
+                      alt="Gold chain" width="270" height="284">
                   </picture>
                   <p>Gold chain</p>
                   <span>$ 215</span>
@@ -194,8 +340,8 @@
                     <source media="(max-width: 1023px)"
                       srcset="img/threader-necklace-closeup-tablet@1x.jpg 1x, img/threader-necklace-closeup-tablet@2x.jpg 2x">
                     <img src="img/threader-necklace-closeup-desktop@1x.jpg"
-                      srcset="img/threader-necklace-closeup-desktop@2x.jpg 2x" alt="threader necklace closeup"
-                      width="270" height="284">
+                      srcset="img/threader-necklace-closeup-desktop@2x.jpg 2x" alt="threader necklace closeup" width="270"
+                      height="284">
                   </picture>
                   <p>Threader-necklace-closeup</p>
                   <span>$ 245</span>
@@ -219,9 +365,8 @@
                       srcset="img/origami-crane-necklace-mobile@1x.jpg 1x, img/origami-crane-necklace-mobile@2x.jpg 2x">
                     <source media="(max-width: 1023px)"
                       srcset="img/origami-crane-necklace-tablet@1x.jpg 1x, img/origami-crane-necklace-tablet@2x.jpg 2x">
-                    <img src="img/origami-crane-necklace-desktop@1x.jpg"
-                      srcset="img/origami-crane-necklace-desktop@2x.jpg 2x" alt="origami crane necklace" width="270"
-                      height="284">
+                    <img src="img/origami-crane-necklace-desktop@1x.jpg" srcset="img/origami-crane-necklace-desktop@2x.jpg 2x"
+                      alt="origami crane necklace" width="270" height="284">
                   </picture>
                   <p>Origami crane necklace</p>
                   <span>$ 185</span>
@@ -321,9 +466,8 @@
                     srcset="img/double-pearl-earrings-mobile@1x.jpg 1x, img/double-pearl-earrings-mobile@2x.jpg 2x">
                   <source media="(max-width: 1023px)"
                     srcset="img/double-pearl-earrings-tablet@1x.jpg 1x, img/double-pearl-earrings-tablet@2x.jpg 2x">
-                  <img src="img/double-pearl-earrings-desktop@1x.jpg"
-                    srcset="img/double-pearl-earrings-desktop@2x.jpg 2x" alt="double pearl earrings" width="270"
-                    height="284">
+                  <img src="img/double-pearl-earrings-desktop@1x.jpg" srcset="img/double-pearl-earrings-desktop@2x.jpg 2x"
+                    alt="double pearl earrings" width="270" height="284">
                 </picture>
                 <p>Double pearl earrings</p>
                 <span>$ 345</span>
@@ -389,235 +533,6 @@
           <!-- Add Pagination -->
           <div class="slider__pagination swiper-pagination"></div>
         </div>
-      </section>
-
-      <section class="blog">
-        <h2>Blog</h2>
-        <a href="#" class="blog__link link">Read All</a>
-        <ul class="blog__list">
-          <li class="blog__item">
-            <div class="blog__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/blog-1-mobile@1x.webp 1x, img/blog-1-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/blog-1-tablet@1x.webp 1x, img/blog-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/blog-1-desktop@1x.webp 1x, img/blog-1-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="img/blog-1-mobile@1x.jpg 1x, img/blog-1-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)" srcset="img/blog-1-tablet@1x.jpg 1x, img/blog-1-tablet@2x.jpg 2x">
-                <img src="img/blog-1-desktop@1x.jpg" srcset="img/blog-1-desktop@2x.jpg 2x" alt="Photo for article"
-                  width="285" height="300">
-              </picture>
-            </div>
-            <div class="blog__text">
-              <p>September 30, 2019</p>
-              <h3>How to care for
-                your jewellery</h3>
-              <a href="#" class="blog__link link">Read Article</a>
-            </div>
-          </li>
-
-          <li class="blog__item">
-            <div class="blog__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/blog-2-mobile@1x.webp 1x, img/blog-2-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/blog-2-tablet@1x.webp 1x, img/blog-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/blog-2-desktop@1x.webp 1x, img/blog-2-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="img/blog-2-mobile@1x.jpg 1x, img/blog-2-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)" srcset="img/blog-2-tablet@1x.jpg 1x, img/blog-2-tablet@2x.jpg 2x">
-                <img src="img/blog-2-desktop@1x.jpg" srcset="img/blog-2-desktop@2x.jpg 2x" alt="Photo for article"
-                  width="285" height="300">
-              </picture>
-            </div>
-            <div class="blog__text">
-              <p>September 23, 2019</p>
-              <h3>Power of
-                crystals</h3>
-              <a href="#" class="blog__link link">Read Article</a>
-            </div>
-          </li>
-          <li class="blog__item blog__item--big">
-            <div class="blog__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/blog-3-mobile@1x.webp 1x, img/blog-3-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/blog-3-tablet@1x.webp 1x, img/blog-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/blog-3-desktop@1x.webp 1x, img/blog-3-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="img/blog-3-mobile@1x.jpg 1x, img/blog-3-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)" srcset="img/blog-3-tablet@1x.jpg 1x, img/blog-3-tablet@2x.jpg 2x">
-                <img src="img/blog-3-desktop@1x.jpg" srcset="img/blog-3-desktop@2x.jpg 2x" alt="Photo for article"
-                  width="630" height="570">
-              </picture>
-            </div>
-            <div class="blog__text">
-              <p>September 16, 2019</p>
-              <h3>AW 19 trends</h3>
-              <a href="#" class="blog__link link">Read Article</a>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="questions">
-        <h2>Frequently asked questions</h2>
-        <ul class="questions__list tabs">
-          <li class="questions__item tabs__item">
-            <button class="questions__title tabs__btn" type="button">What materials are the jewellery made of?</button>
-            <div class="questions__content tabs__content">
-              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones
-                and crystals.</p>
-            </div>
-          </li>
-          <li class="questions__item tabs__item">
-            <button class="questions__title tabs__btn" type="button">Which countries do you deliver to?</button>
-            <div class="questions__content tabs__content">
-              <p>You can place an order from the country where you’re located at the time you buy your items. It is not
-                possible to have
-                orders delivered to another country (e.g. placing the order on the UK website and deliver it to
-                Ireland). We send all
-                parcels from our warehouse in UK.</p>
-            </div>
-          </li>
-          <li class="questions__item tabs__item">
-            <button class="questions__title tabs__btn" type="button">What are the payment methods?</button>
-            <div class="questions__content tabs__content">
-              <p>Our shop allows you to make payments using a variety of methods. You can select preferred payment
-                methods for online and in-store
-                transactions.</p>
-            </div>
-          </li>
-          <li class="questions__item tabs__item">
-            <button class="questions__title tabs__btn" type="button">Can I return the jewellery if it didn’t fit me?</button>
-            <div class="questions__content tabs__content">
-              <p>When your Jewellery arrives, you have the right to return or cancel your order for any reason. If you
-                don't like the
-                goods or have changed your mind, you can cancel the order. If you have already paid for the goods or
-                services, the
-                seller must refund your money within 30 days of your cancelling the agreement.</p>
-            </div>
-          </li>
-      </section>
-
-      <section class="gallery">
-        <h2><span>@</span>Chjewellery</h2>
-        <a href="#" class="gallery__link link">Follow Us</a>
-        <ul class="gallery__list">
-          <li class="gallery__item gallery__item--1">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/gallery-1-mobile@1x.webp 1x, img/gallery-1-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-1-tablet@1x.webp 1x, img/gallery-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-1-desktop@1x.webp 1x, img/gallery-1-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/gallery-1-mobile@1x.jpg 1x, img/gallery-1-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-1-tablet@1x.jpg 1x, img/gallery-1-tablet@2x.jpg 2x">
-                <img src="img/gallery-1-desktop@1x.jpg" srcset="img/gallery-1-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="230" height="230">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--2">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/gallery-2-mobile@1x.webp 1x, img/gallery-2-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-2-tablet@1x.webp 1x, img/gallery-2-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-2-desktop@1x.webp 1x, img/gallery-2-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/gallery-2-mobile@1x.jpg 1x, img/gallery-2-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-2-tablet@1x.jpg 1x, img/gallery-2-tablet@2x.jpg 2x">
-                <img src="img/gallery-2-desktop@1x.jpg" srcset="img/gallery-2-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="230" height="154">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--3">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/gallery-3-mobile@1x.webp 1x, img/gallery-3-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-3-tablet@1x.webp 1x, img/gallery-3-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-3-desktop@1x.webp 1x, img/gallery-3-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/gallery-3-mobile@1x.jpg 1x, img/gallery-3-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-3-tablet@1x.jpg 1x, img/gallery-3-tablet@2x.jpg 2x">
-                <img src="img/gallery-3-desktop@1x.jpg" srcset="img/gallery-3-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="400" height="414">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--4">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/gallery-4-mobile@1x.webp 1x, img/gallery-4-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-4-tablet@1x.webp 1x, img/gallery-4-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-4-desktop@1x.webp 1x, img/gallery-4-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/gallery-4-mobile@1x.jpg 1x, img/gallery-4-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-4-tablet@1x.jpg 1x, img/gallery-4-tablet@2x.jpg 2x">
-                <img src="img/gallery-4-desktop@1x.jpg" srcset="img/gallery-4-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="232" height="193">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--5">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/gallery-5-mobile@1x.webp 1x, img/gallery-5-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-5-tablet@1x.webp 1x, img/gallery-5-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-5-desktop@1x.webp 1x, img/gallery-5-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/gallery-5-mobile@1x.jpg 1x, img/gallery-5-mobile@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-5-tablet@1x.jpg 1x, img/gallery-5-tablet@2x.jpg 2x">
-                <img src="img/gallery-5-desktop@1x.jpg" srcset="img/gallery-5-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="218" height="191">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--6">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-6-tablet@1x.webp 1x, img/gallery-6-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-6-desktop@1x.webp 1x, img/gallery-6-desktop@2x.webp 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-6-tablet@1x.jpg 1x, img/gallery-6-tablet@2x.jpg 2x">
-                <img src="img/gallery-6-desktop@1x.jpg" srcset="img/gallery-6-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="218" height="218">
-              </picture>
-            </div>
-          </li>
-          <li class="gallery__item gallery__item--7">
-            <div class="gallery__image">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/gallery-7-tablet@1x.webp 1x, img/gallery-7-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/gallery-7-desktop@1x.webp 1x, img/gallery-7-desktop@2x.webp 2x">
-                <source media="(max-width: 1023px)"
-                  srcset="img/gallery-7-tablet@1x.jpg 1x, img/gallery-7-tablet@2x.jpg 2x">
-                <img src="img/gallery-7-desktop@1x.jpg" srcset="img/gallery-7-desktop@2x.jpg 2x" alt="Photo for gallery"
-                  width="232" height="166">
-              </picture>
-            </div>
-          </li>
-        </ul>
       </section>
 
     </main>

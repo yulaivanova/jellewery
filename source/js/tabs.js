@@ -7,8 +7,6 @@
   const TABS_LIST = document.querySelector('.tabs');
   const questions = document.querySelector('.questions');
 
-  TABS_LIST.classList.remove('tabs--nojs');
-
   TABS.forEach(elem => {
     if (elem.children[1].classList.contains('tabs__item--active')) {
       elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
@@ -38,6 +36,7 @@
     }
   };
   if (TABS_LIST) { 
+    TABS_LIST.classList.remove('tabs--nojs');
     TABS_LIST.addEventListener('click', (event) => {
       const target = event.target;
       if (target.classList.contains('tabs__btn')) {
