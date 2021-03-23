@@ -1,0 +1,24 @@
+.tabs-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tabs-nav__item {
+  padding: 5px 0;
+  margin-right: 34px;
+
+  color: #9B9997;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 38px;
+  }
+}
+
+.tabs-nav__item--is-active {
+  color: $text-color;
+}

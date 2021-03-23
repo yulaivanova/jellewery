@@ -1,11 +1,14 @@
 'use strict';
 (function () {
+  const ENTER_KEY = 'Enter';
 
   const CATALOG = document.querySelector('.catalog');
-  const INDEX_SLIDER = document.querySelector('.slider--index');
+  const SLIDER = document.querySelector('.slider');
+  const PRODUCT = document.querySelector('.product__photos');
+  const GALLERY_ITEM = document.querySelectorAll('.photos__gallery label');
 
   function initSwiper() {
-    let swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.slider__wrapper', {
       loop: true,
       slidesPerView: 2,
       spaceBetween: 30,
@@ -79,14 +82,62 @@
     });
   };
 
+  function initProductSwiper() {
+    let swiper = new Swiper('.photos__slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: '.photos__pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + ' of ' + total;
+        },
+      },
+    });
+  };
+
+  function initMobileSwiper() {
+    let swiper = new Swiper('.slider__wrapper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: '.photos__pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + ' of ' + total;
+        },
+      },
+    });
+  };
+
+
   if (CATALOG) {
     initCatalogSwiper();
   }
   
-  if (INDEX_SLIDER) {
+  if (SLIDER) {
     initSwiper();
   }
-  
+
+  if (PRODUCT) {
+    initProductSwiper();
+  }
+
+  GALLERY_ITEM.forEach(item => {
+    item.addEventListener('keydown', function (evt) {
+      let target = evt.target.closest('label');
+      let inputId = target.getAttribute('for');
+      let input = document.getElementById(inputId);
+
+      if (evt.key === ENTER_KEY) {
+        input.checked = true;
+      }
+    });
+  });
 
 })();
 

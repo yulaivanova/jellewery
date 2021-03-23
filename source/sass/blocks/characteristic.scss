@@ -1,0 +1,18 @@
+.characteristic__table {
+  width: 100%;
+}
+
+.characteristic__row td {
+  border-bottom: 1px solid #f6f5f4;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+
+  &:nth-child(2n) {
+    text-align: right;
+    font-weight: 400;
+  }
+}

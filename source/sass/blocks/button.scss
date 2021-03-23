@@ -1,0 +1,25 @@
+.button {
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.button--brown {
+  background-color: $brown;
+  color: $white;
+  border: none;
+}
+
+.button--white {
+  background-color: $white;
+  color: $text-color;
+  border: 1px solid $brown;
+
+}
