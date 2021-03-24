@@ -71,9 +71,9 @@
 
       <section class="catalog">
         <div class="catalog__filter filter">
-          <a href="filter-popup.html" class="filter__link button button--brown">Filter</a>
+          <a href="filter.html" class="filter__link button button--brown">Filter</a>
           <div class="filter__popup">
-            <button class="filter__close-toggle" type="button" tabindex="14"><span class="visually-hidden">Закрыть окно</span></button>
+            <button class="popup__toggle popup__toggle--filter" type="button" tabindex="14"><span class="visually-hidden">Закрыть окно</span></button>
             <form action="POST">
               <div class="tabs tabs--nojs">
                 <fieldset class="filter__field tabs__item">
@@ -766,6 +766,41 @@
           </div>
           <!-- Add Pagination -->
           <div class="catalog__pagination swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="popup popup--login">
+        <div class="popup__wrapper">
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть
+              окно</span></button>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/login-desktop@1x.webp 1x, img/login-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/login-mobile@1x.jpg 1x, img/login-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/login-tablet@1x.jpg 1x, img/login-tablet@2x.jpg 2x">
+            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for gallery" width="430"
+              height="138">
+          </picture>
+          <h2>Log In</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset">
+              <label for="email"><span class="visually-hidden">Your email</span></label>
+              <input type="email" name="email" placeholder="Your E-mail" minlength="3" id="email" tabindex="2"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      
+              <label for="password"><span class="visually-hidden">Your password</span></label>
+              <input type="password" name="password" placeholder="Password" id="password" autocomplete="on" tabindex="2" required>
+              <a href="#" class="popup__link popup__link--password">Forgot your password?</a>
+            </fieldset>
+            <button class="popup__button button button--brown" type="submit" tabindex="0">Log In</button>
+            <div class="popup__signUp">
+              <p>Don’t have an account?</p>
+              <a href="#" class="popup__link popup__link--signUp">Sign up</a>
+            </div>
+          </form>
         </div>
       </section>
 

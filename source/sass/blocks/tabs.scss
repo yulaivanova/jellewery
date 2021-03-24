@@ -9,6 +9,12 @@
 
 .tabs--nojs .tabs__content {
   height: auto;
+  padding-bottom: 20px;
+}
+
+.tabs--nojs .tabs__btn::after,
+.tabs--nojs .tabs__btn::after {
+  display: none;
 }
 
 .tabs__content--active {

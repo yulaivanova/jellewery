@@ -9,20 +9,30 @@
   const HEADER = document.querySelector('.header');
 
   NAV_MAIN.classList.remove('site-nav--nojs');
-  NAV_MAIN.classList.remove('site-nav--opened');
-  NAV_MAIN.classList.add('site-nav--closed');
-  HEADER.classList.remove('header--opened');
+  closeMenu();
+
+  function closeMenu() {
+    NAV_MAIN.classList.add('site-nav--closed');
+    NAV_MAIN.classList.remove('site-nav--opened');
+    HEADER.classList.remove('header--opened');
+  }
+
+  function openMenu() {
+    NAV_MAIN.classList.remove('site-nav--closed');
+    NAV_MAIN.classList.add('site-nav--opened');
+    HEADER.classList.add('header--opened');
+  }
 
   NAV_TOGGLE.addEventListener('click', function () {
     if (NAV_MAIN.classList.contains('site-nav--closed')) {
-      NAV_MAIN.classList.remove('site-nav--closed');
-      NAV_MAIN.classList.add('site-nav--opened');
-      HEADER.classList.toggle('header--opened');
+      openMenu();
     } else {
-      NAV_MAIN.classList.add('site-nav--closed');
-      NAV_MAIN.classList.remove('site-nav--opened');
-      HEADER.classList.toggle('header--opened');
+      closeMenu();
     }
   });
+
+  window.menu = {
+    close: closeMenu,
+  };
 
 })();

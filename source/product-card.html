@@ -205,7 +205,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="product__button button button--brown">Add to cart</a>
+            <a href="cart.html" class="product__button button button--brown">Add to cart</a>
           </div>
           <ul class="product__terms">
             <li>14 Day Returns</li>
@@ -532,6 +532,88 @@
           </div>
           <!-- Add Pagination -->
           <div class="slider__pagination swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="popup popup--login">
+        <div class="popup__wrapper">
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть
+              окно</span></button>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/login-desktop@1x.webp 1x, img/login-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/login-mobile@1x.jpg 1x, img/login-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/login-tablet@1x.jpg 1x, img/login-tablet@2x.jpg 2x">
+            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for gallery" width="430"
+              height="138">
+          </picture>
+          <h2>Log In</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset">
+              <label for="email"><span class="visually-hidden">Your email</span></label>
+              <input type="email" name="email" placeholder="Your E-mail" minlength="3" id="email" tabindex="2"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      
+              <label for="password"><span class="visually-hidden">Your password</span></label>
+              <input type="password" name="password" placeholder="Password" id="password" tabindex="2" autocomplete="on" required>
+              <a href="#" class="popup__link popup__link--password">Forgot your password?</a>
+            </fieldset>
+            <button class="popup__button button button--brown" type="submit" tabindex="0">Log In</button>
+            <div class="popup__signUp">
+              <p>Don’t have an account?</p>
+              <a href="#" class="popup__link popup__link--signUp">Sign up</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="popup popup--cart">
+        <div class="popup__wrapper">
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть окно</span></button>
+          <h2>The item was added to your cart</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset cart">
+              <div class="cart__img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/cart-mobile@1x.webp 1x, img/cart-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/cart-tablet@1x.webp 1x, img/cart-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cart-desktop@1x.webp 1x, img/cart-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/cart-mobile@1x.jpg 1x, img/cart-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="img/cart-tablet@1x.jpg 1x, img/cart-tablet@2x.jpg 2x">
+                  <img src="img/cart-desktop@1x.jpg" srcset="img/cart-desktop@2x.jpg 2x" alt="Photo for cart" width="84"
+                    height="79">
+                </picture>
+              </div>
+              <div class="cart__item-desc">
+                <h3>Gold Necklace</h3>
+                <p class="cart__price">$ <span>115</span></p>
+              </div>
+              <div class="cart__counter">
+                <label for="item-amount"><span class="visually-hidden">Количество товара</span></label>
+                <button class="cart__button cart__button--plus" type="button" name="plus-item">
+                  <span class="visually-hidden">Увеличить количество товара на 1</span>
+                </button>
+                <input type="text" name="amount-of-items" value="1" id="item-amount" pattern="[0-9]{1,2}"
+                  title="Количество товара не более 99">
+                <button class="cart__button cart__button--minus" type="button" name="minus-item">
+                  <span class="visually-hidden">Уменьшить количество товара на 1</span>
+                </button>
+              </div>
+              <div class="cart__total">
+                <p class="cart__total-count">You have <span>1</span> item in the cart</p>
+                <p class="cart__subtotal">Cart subtotal: $ <span>115</span></p>
+              </div>
+            </fieldset>
+            <div class="popup__btn-wrapper">
+              <a href="catalog.html" class="popup__button button button--white" tabindex="0">Continue shopping</a>
+              <button class="popup__button button button--brown" type="submit" tabindex="0">Checkout</button>
+            </div>
+          </form>
         </div>
       </section>
 

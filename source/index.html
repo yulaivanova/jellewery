@@ -463,7 +463,7 @@
 
       <section class="questions">
         <h2>Frequently asked questions</h2>
-        <ul class="questions__list tabs">
+        <ul class="questions__list tabs tabs--nojs">
           <li class="questions__item tabs__item">
             <button class="questions__title tabs__btn" type="button">What materials are the jewellery made of?</button>
             <div class="questions__content tabs__content">
@@ -618,6 +618,39 @@
             </div>
           </li>
         </ul>
+      </section>
+
+      <section class="popup popup--login">
+        <div class="popup__wrapper">
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть окно</span></button>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/login-desktop@1x.webp 1x, img/login-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/login-mobile@1x.jpg 1x, img/login-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/login-tablet@1x.jpg 1x, img/login-tablet@2x.jpg 2x">
+            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for gallery" width="430"
+              height="138">
+          </picture>
+          <h2>Log In</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset">
+              <label for="email"><span class="visually-hidden">Your email</span></label>
+              <input type="email" name="email" placeholder="Your E-mail" minlength="3" id="email" tabindex="2"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+
+              <label for="password"><span class="visually-hidden">Your password</span></label>
+              <input type="password" name="password" placeholder="Password" minlength="6" id="password" tabindex="2" required>
+              <a href="#" class="popup__link popup__link--password">Forgot your password?</a>
+            </fieldset>
+            <button class="popup__button button button--brown" type="submit" tabindex="0">Log In</button>
+            <div class="popup__signUp">
+              <p>Don’t have an account?</p>
+              <a href="#" class="popup__link popup__link--signUp">Sign up</a>
+            </div>
+          </form>
+        </div>
       </section>
 
     </main>

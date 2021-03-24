@@ -75,7 +75,7 @@
 
   cursor: pointer;
 
-  z-index: 99;
+  z-index: 60;
 
   @media (max-width: $mobile-width) {
     display: none;
@@ -109,6 +109,8 @@
 
 .slider__pagination {
   bottom: 130px;
+
+  z-index: 60;
 
   @media (max-width: $tablet-width) {
     bottom: 80px;
