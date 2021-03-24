@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jellewery filter">
+  <title>Jellewery filter</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/cormorant-garamond-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-700.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header header--opened">
+      <div class="header__inner">
+        <form action="#" class="search">
+          <label for="usersearch">
+            <svg class="search__icon" width="14" height="14">
+              <use xlink:href="img/sprite_auto.svg#search-icon">
+              </use>
+            </svg></label>
+          <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
+        </form>
+        <a href="index.html" class="header__logo">
+          <span class="visually-hidden">Jewellery Store</span>
+          <svg class="header__logo-icon" width="66" height="66">
+            <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
+          </svg>
+        </a>
+        <div class="header__user-link user-link">
+          <a href="login.html" class="user-link__item user-link__item--login" tabindex="0">Login</a>
+          <a href="#" class="user-link__item user-link__item--cart" tabindex="0">
+            <span>Cart 0</span>
+            <svg class="user-link__icon" width="18" height="16">
+              <use xlink:href="img/sprite_auto.svg#cart-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav class="header__site-nav site-nav site-nav--opened site-nav--nojs">
+        <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">What’s new</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Chokers</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Necklaces</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Rings</a></li>
+          <li class="site-nav__item"><a href="#" class="site-nav__link" tabindex="0">Earrings</a></li>
+
+          <li class="site-nav__add-item"><a href="#" class="site-nav__link">About CH</a></li>
+          <li class="site-nav__add-item"><a href="#" class="site-nav__link">Stores & Hours</a></li>
+          <li class="site-nav__add-item"><a href="#" class="site-nav__link">Contact Us</a></li>
+          <li class="site-nav__add-item"><a href="login.html" class="site-nav__link site-nav__link--login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="filter filter--nojs filter__popup">
+        <form action="POST">
+          <div class="tabs tabs--nojs">
+            <fieldset class="filter__field tabs__item">
+              <button type="button" class="filter__toggle tabs__btn">Product</button>
+              <div class="filter__content tabs__content checkbox">
+                <ul class="checkbox__list">
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="necklaces" value="necklaces" id="necklaces" checked>
+                    <label for="necklaces">Necklaces</label>
+                  </li>
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="chokers" value="chokers" id="chokers" checked>
+                    <label for="chokers">Chokers</label>
+                  </li>
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="rings" value="rings" id="rings">
+                    <label for="rings">Rings</label>
+                  </li>
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="earrings" value="earrings" id="earrings" checked>
+                    <label for="earrings">Earrings</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field tabs__item">
+              <button type="button" class="filter__toggle tabs__btn">Material</button>
+              <div class="filter__content tabs__content checkbox">
+                <ul class="checkbox__list">
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="gold" value="gold" id="gold">
+                    <label for="gold">Gold</label>
+                  </li>
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="silver" value="silver" id="silver">
+                    <label for="silver">Silver</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field tabs__item">
+              <button type="button" class="filter__toggle tabs__btn">Collection</button>
+              <div class="filter__content tabs__content checkbox">
+                <ul class="checkbox__list">
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="flamingo" value="flamingo" id="flamingo">
+                    <label for="flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="checkbox__item">
+                    <input class="visually-hidden" type="checkbox" name="dreams" value="dreams" id="dreams">
+                    <label for="dreams">Dreams</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field tabs__item">
+              <button type="button" class="filter__toggle tabs__btn">Price</button>
+              <div class="filter__content filter-range tabs__content">
+                <div class="filter-range__controls">
+                  <div class="filter-range__bar"></div>
+                  <div class="filter-range__toggle filter-range__toggle--low"></div>
+                  <div class="filter-range__toggle filter-range__toggle--high"></div>
+                </div>
+                <div class="filter-range__price">
+                  <label for="low-price">$
+                    <input type="text" name="low-price" id="low-price" value="55" tabindex="0">
+                  </label>
+                  <label for="high-price">$
+                    <input type="text" name="low-price" id="high-price" value="155" tabindex="0">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="filter__btn-wrapper">
+            <button type="submit" class="filter__button button button--brown ">Apply</button>
+            <button type="reset" class="filter__button button button--white filter__button--reset">Clear All</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__signUp-form signUp-form">
+          <h2>The good stuff in your inbox</h2>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <form action="#">
+            <label for="user-email">
+              <input type="email" name="user-email" id="user-email" placeholder="Your E-mail">
+            </label>
+            <button type="submit" class="signUp-form__btn">
+              Sign Up
+              <svg class="signUp-form__icon" width="29" height="19">
+                <use xlink:href="img/sprite_auto.svg#arrow-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="footer__terms terms">
+          <ul class="terms__list">
+            <li class="terms__item"><a href="#" class="terms__link">Ordering & Payment</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Terms & Conditions</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Returns & Exchanges</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Delivery</a></li>
+          </ul>
+          <ul class="terms__list">
+            <li class="terms__item"><a href="#" class="terms__link">About CH</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Stores & Hours</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Jobs</a></li>
+            <li class="terms__item"><a href="#" class="terms__link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="8" height="15">
+                  <use xlink:href="img/sprite_auto.svg#fb-icon"></use>
+                </svg>
+                Facebook
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="15" height="15">
+                  <use xlink:href="img/sprite_auto.svg#insta-icon"></use>
+                </svg>
+                Instagram
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="15" height="15">
+                  <use xlink:href="img/sprite_auto.svg#pinterest-icon"></use>
+                </svg>
+                Pinterest
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="15" height="15">
+                  <use xlink:href="img/sprite_auto.svg#tw-icon"></use>
+                </svg>
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
