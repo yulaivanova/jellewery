@@ -295,9 +295,9 @@
   const openLoginPopup = function () {
     POPUP_LOGIN.classList.add('popup--opened');
     document.body.style.overflow = 'hidden';
-
+    USER_EMAIL.focus();
     if (USER_EMAIL) {
-      USER_EMAIL.focus();
+      
       USER_EMAIL.value = window.storage.email;
     }
   };

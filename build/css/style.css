@@ -2325,12 +2325,8 @@ template {
      object-fit: cover; }
 
 .photos__view img {
-  width: 100px;
-  height: 125px; }
-  @media (max-width: 1023px) {
-    .photos__view img {
-      width: 97px;
-      height: 129px; } }
+  width: 100%;
+  height: 100%; }
 
 .photos__item {
   position: absolute;
@@ -2346,7 +2342,8 @@ template {
   max-height: 125px; }
   .photos__view:hover, .photos__view:focus {
     -webkit-filter: brightness(80%);
-            filter: brightness(80%); }
+            filter: brightness(80%);
+    outline: none; }
   @media (max-width: 1023px) {
     .photos__view {
       max-height: 129px; } }
@@ -2684,35 +2681,36 @@ template {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.popup--login .popup__fieldset input {
+.popup--login input {
   background-color: #f0eae4;
   border: 0;
   border-bottom: 1px solid #1D1613;
-  padding: 10px 0;
+  padding: 10px 5px;
+  width: 100%;
   margin-bottom: 30px; }
-  .popup--login .popup__fieldset input:last-of-type {
+  .popup--login input:last-of-type {
     margin-bottom: 0; }
-  .popup--login .popup__fieldset input::-webkit-input-placeholder {
+  .popup--login input::-webkit-input-placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     color: #9B9997; }
-  .popup--login .popup__fieldset input::-moz-placeholder {
+  .popup--login input::-moz-placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     color: #9B9997; }
-  .popup--login .popup__fieldset input:-ms-input-placeholder {
+  .popup--login input:-ms-input-placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     color: #9B9997; }
-  .popup--login .popup__fieldset input::-ms-input-placeholder {
+  .popup--login input::-ms-input-placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     color: #9B9997; }
-  .popup--login .popup__fieldset input::placeholder {
+  .popup--login input::placeholder {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
@@ -3017,16 +3015,17 @@ template {
 
 .cart__button--plus::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 6px;
   width: 14px;
   height: 2px;
-  vertical-align: middle;
   background-color: #9B9997; }
 
 .cart__button--plus::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 13px;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
