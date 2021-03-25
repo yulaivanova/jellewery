@@ -1,11 +1,30 @@
 .social__list {
   @include list-reset;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  
 }
 
 .social__item {
-  padding-bottom: 30px;
+  padding-bottom: 21px;
+  padding-left: 17px;
 
   &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 20px;
     padding-bottom: 0;
   }
 }
@@ -22,5 +41,39 @@
 }
 
 .social__icon {
-  padding-right: 15px;
+  padding-right: 10px;
+}
+
+.social__icon--fb {
+  @media (max-width: $mobile-width) {
+    width: 12px;
+    height: 21px;
+  }
+}
+
+.social__icon--insta {
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.social__icon--pinterest {
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.social__icon--tw {
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.social__link span {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }

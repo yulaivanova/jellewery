@@ -53,8 +53,12 @@
 
 .product-card__link p {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 3px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 11px;
+  }
 }
 
 .product-card__link span {

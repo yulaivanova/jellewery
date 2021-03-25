@@ -5,7 +5,7 @@
 .characteristic__row td {
   border-bottom: 1px solid #f6f5f4;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
 
   font-size: 14px;
   line-height: 18px;
@@ -14,5 +14,9 @@
   &:nth-child(2n) {
     text-align: right;
     font-weight: 400;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 10px;
   }
 }

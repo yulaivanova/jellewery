@@ -93,7 +93,7 @@
             clickable: true,
             type: 'custom',
             renderCustom: function (swiper, current, total) {
-              return current + ' of ' + total;
+              return current + ' &nbsp of &nbsp' + total;
             },
           },
         },
@@ -114,7 +114,7 @@
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
+          return '<span class="' + className + '">' + (index + 1) + '</span>' +'&nbsp &nbsp';
         },
       },
     });
@@ -122,22 +122,6 @@
 
   function initProductSwiper() {
     let swiper = new Swiper('.photos__slider', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 50,
-      pagination: {
-        el: '.photos__pagination',
-        clickable: true,
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-          return current + ' of ' + total;
-        },
-      },
-    });
-  };
-
-  function initMobileSwiper() {
-    let swiper = new Swiper('.slider__wrapper', {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 50,

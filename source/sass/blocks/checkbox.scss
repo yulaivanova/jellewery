@@ -3,10 +3,24 @@
 }
 
 .checkbox__item {
-  padding-bottom: 18px;
+  padding-bottom: 9px;
 
   &:last-child {
-    padding-bottom: 29px;
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 18px;
+
+    &:last-child {
+      padding-bottom: 36px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &:last-child {
+      padding-bottom: 25px;
+    }
   }
 }
 
@@ -16,12 +30,19 @@
   line-height: 18px;
   position: relative;
 
-  padding-left: 25px;
+  padding-left: 24px;
 
   cursor: pointer;
 
   &:hover {
     color: $brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 30px;
+
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 
@@ -32,9 +53,17 @@
   left: 0;
   top: 2px;
 
-  width: 16px;
+  width: 15px;
   height: 15px;
+
+  box-sizing: border-box;
+
   border: 1px solid $brown;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .checkbox__item label:hover::before {
@@ -52,9 +81,14 @@
 .checkbox__item input:checked + label::before {
   content: "";
   position: absolute;
-  width: 16px;
+  width: 15px;
   height: 15px;
   left: 0;
   top: 2px;
   background-color: $brown;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }

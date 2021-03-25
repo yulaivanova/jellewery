@@ -22,11 +22,24 @@
 }
 
 .tabs__content--active.questions__content {
-  padding-bottom: 49px;
+  padding-bottom: 41px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 44px;
+  }
+  @media (max-width: $mobile-width) {
+    padding-top: 5px;
+    padding-bottom: 21px;
+  }
 }
 
 .tabs__content--active.filter__content {
   padding-top: 3px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 4px;
+  }
 }
 
 .tabs__btn {
@@ -65,9 +78,29 @@
 }
 
 .tabs__btn--active.questions__title {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.tabs__btn--active.filter__toggle {
+  padding-bottom: 21px;
+}
+
+.tabs__btn--active.filter__toggle::after {
+  top: calc(50% - 2px);
+
+  @media (max-width: $tablet-width) {
+    top: calc(50% + 3px);
+  }
+
+  @media (max-width: $mobile-width) {
+    top: calc(50% - 1px);
+  }
 }
 
 .tabs__btn--active.questions__title::after {
-  top: 50%;
+  top: 70%;
+
+  @media (max-width: $mobile-width) {
+    top: 38%;
+  }
 }

@@ -5,8 +5,8 @@
 }
 
 .tabs-nav__item {
-  padding: 5px 0;
-  margin-right: 34px;
+  padding: 5px 2px;
+  margin-right: 31px;
 
   color: #9B9997;
 
@@ -15,7 +15,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-right: 38px;
+    margin-right: 36px;
+    padding-left: 0;
   }
 }
 
