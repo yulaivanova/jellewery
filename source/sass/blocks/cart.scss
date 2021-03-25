@@ -157,11 +157,12 @@
 
 .cart__button--plus::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  
   width: 14px;
   height: 2px;
-
-  vertical-align: middle;
 
   background-color: #9B9997;
 }
@@ -169,7 +170,7 @@
 .cart__button--plus::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 13px;
   -webkit-transform: translate(-50%);
     -ms-transform: translate(-50%);

@@ -161,12 +161,14 @@
   flex-direction: column;
 }
 
-.popup--login .popup__fieldset input {
+.popup--login  input {
   background-color: #f0eae4;
   border: 0;
   border-bottom: 1px solid #1D1613;
 
-  padding: 10px 0;
+  padding: 10px 5px;
+
+  width: 100%;
 
   margin-bottom: 30px;
 
