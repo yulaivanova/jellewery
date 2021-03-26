@@ -12,7 +12,7 @@
   position: relative;
 
   height: 1px;
-  background-color:#f0eae4;
+  background-color: #f0eae4;
 
   @media (max-width: $tablet-width) {
     margin: 14px 0 13px 26px;
@@ -42,7 +42,7 @@
   @media (max-width: $mobile-width) {
     width: calc(100% - 100px);
   }
-} 
+}
 
 .filter-range__toggle {
   position: absolute;
@@ -60,6 +60,10 @@
     height: 18px;
 
     top: -9px;
+  }
+
+  &:hover {
+    filter: brightness(70%);
   }
 }
 
@@ -82,7 +86,6 @@
     right: 44px;
   }
 }
-  
 
 .filter-range__price {
   display: flex;

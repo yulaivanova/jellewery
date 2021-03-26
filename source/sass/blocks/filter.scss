@@ -36,7 +36,7 @@
   }
 }
 
-.filter__toggle:after {
+.filter__toggle::after {
   right: 26px;
   top: calc(50% - 11px);
   width: 9px;
@@ -166,7 +166,7 @@
 }
 
 .filter--opened .filter__link {
-  display:  none;
+  display: none;
 }
 
 .filter--opened .filter__popup {
@@ -177,7 +177,7 @@
     left: -19px;
     z-index: 99;
 
-    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
     width: 442px;
   }
 

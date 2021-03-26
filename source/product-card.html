@@ -77,6 +77,8 @@
             </div>
             <label class="photos__view" for="radiogal1" tabindex="0">
               <picture>
+                <!-- 1х: 97px; 2x: 194px -->
+                <!-- 1х: 100px; 2x: 250px -->
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/gold-necklace-preview1-tablet@1x.webp 1x, img/gold-necklace-preview1-tablet@2x.webp 2x">
                 <source type="image/webp"
@@ -91,6 +93,8 @@
             <input name="radiogal" type="radio" id="radiogal2" checked>
             <div class="photos__item">
               <picture>
+                <!-- 1х: 319px; 2x: 638px -->
+                <!-- 1х: 470px; 2x: 940px -->
                 <source type="image/webp" srcset="img/gold-necklace-2-full@1x.webp 1x, img/gold-necklace-2-full@2x.webp 2x ">
                 <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/necklace-detail-tablet@1x.webp 1x, img/necklace-detail-tablet@2x.webp 2x">
@@ -101,6 +105,8 @@
             </div>
             <label class="photos__view" for="radiogal2" tabindex="0">
               <picture>
+                <!-- 1х: 97px; 2x: 194px -->
+                <!-- 1х: 100px; 2x: 250px -->
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/gold-necklace-preview2-tablet@1x.webp 1x, img/gold-necklace-preview2-tablet@2x.webp 2x">
                 <source type="image/webp"
@@ -111,7 +117,6 @@
                   srcset="img/gold-necklace-preview2-desktop@2x.jpg 2x" alt="gold necklace preview" width="100" height="125">
               </picture>
             </label>
-          
             <input name="radiogal" type="radio" id="radiogal3">
             <div class="photos__item">
               <picture>
@@ -121,6 +126,8 @@
             </div>
             <label class="photos__view" for="radiogal3" tabindex="0">
               <picture>
+                <!-- 1х: 97px; 2x: 194px -->
+                <!-- 1х: 100px; 2x: 250px -->
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/pgold-necklace-preview3-tablet@1x.webp 1x, img/gold-necklace-preview3-tablet@2x.webp 2x">
                 <source type="image/webp"
@@ -212,10 +219,9 @@
             <li>2-Year Warranty</li>
             <li>Free Shipping</li>
           </ul>
-        </div> 
+        </div>
       </section>
-
-      <section class="slider slider--product">
+      <section class="slider slider--nojs slider--product">
         <h2>You May Also Like</h2>
         <a href="catalog.html" class="slider__link link">Shop Now</a>
         <div class="swiper-container slider__wrapper">
@@ -536,9 +542,12 @@
 
       <section class="popup popup--login">
         <div class="popup__wrapper">
-          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="6"><span class="visually-hidden">Закрыть
               окно</span></button>
           <picture>
+            <!-- 1х: 270px; 2x: 540px -->
+            <!-- 1х: 442px; 2x: 884px -->
+            <!-- 1х: 430px; 2x: 860px -->
             <source type="image/webp" media="(max-width: 767px)"
               srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
@@ -546,7 +555,7 @@
             <source type="image/webp" srcset="img/login-desktop@1x.webp 1x, img/login-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="img/login-mobile@1x.jpg 1x, img/login-mobile@2x.jpg 2x">
             <source media="(max-width: 1023px)" srcset="img/login-tablet@1x.jpg 1x, img/login-tablet@2x.jpg 2x">
-            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for gallery" width="430"
+            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for login popup" width="430"
               height="138">
           </picture>
           <h2>Log In</h2>
@@ -554,16 +563,15 @@
             <fieldset class="popup__fieldset">
               <label for="email"><span class="visually-hidden">Your email</span></label>
               <input type="email" name="email" placeholder="Your E-mail" minlength="3" id="email" tabindex="2"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-      
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" tabindex="1" required>
               <label for="password"><span class="visually-hidden">Your password</span></label>
-              <input type="password" name="password" placeholder="Password" id="password" tabindex="2" autocomplete="on" required>
-              <a href="#" class="popup__link popup__link--password">Forgot your password?</a>
+              <input type="password" name="password" placeholder="Password" minlength="6" id="password" tabindex="2" autocomplete="on" required>
+              <a href="#" class="popup__link popup__link--password" tabindex="3">Forgot your password?</a>
             </fieldset>
-            <button class="popup__button button button--brown" type="submit" tabindex="0">Log In</button>
+            <button class="popup__button button button--brown" type="submit" tabindex="4">Log In</button>
             <div class="popup__signUp">
               <p>Don’t have an account?</p>
-              <a href="#" class="popup__link popup__link--signUp">Sign up</a>
+              <a href="#" class="popup__link popup__link--signUp" tabindex="5">Sign up</a>
             </div>
           </form>
         </div>
@@ -571,12 +579,15 @@
 
       <section class="popup popup--cart">
         <div class="popup__wrapper">
-          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть окно</span></button>
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
           <h2>The item was added to your cart</h2>
           <form action="#">
             <fieldset class="popup__fieldset cart">
               <div class="cart__img-wrapper">
                 <picture>
+                  <!-- 1х: 70px; 2x: 140px -->
+                  <!-- 1х: 88px; 2x: 176px -->
+                  <!-- 1х: 84px; 2x: 168px -->
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/cart-mobile@1x.webp 1x, img/cart-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)"
@@ -594,12 +605,12 @@
               </div>
               <div class="cart__counter">
                 <label for="item-amount"><span class="visually-hidden">Количество товара</span></label>
-                <button class="cart__button cart__button--plus" type="button" name="plus-item">
+                <button class="cart__button cart__button--plus" type="button" name="plus-item" tabindex="1">
                   <span class="visually-hidden">Увеличить количество товара на 1</span>
                 </button>
                 <input type="text" name="amount-of-items" value="1" id="item-amount" pattern="[0-9]{1,2}"
-                  title="Количество товара не более 99">
-                <button class="cart__button cart__button--minus" type="button" name="minus-item">
+                  title="Количество товара не более 99" tabindex="2">
+                <button class="cart__button cart__button--minus" type="button" name="minus-item" tabindex="3">
                   <span class="visually-hidden">Уменьшить количество товара на 1</span>
                 </button>
               </div>
@@ -609,8 +620,8 @@
               </div>
             </fieldset>
             <div class="popup__btn-wrapper">
-              <a href="catalog.html" class="popup__button button button--white" tabindex="0">Continue shopping</a>
-              <button class="popup__button button button--brown" type="submit" tabindex="0">Checkout</button>
+              <a href="catalog.html" class="popup__button button button--white" tabindex="4">Continue shopping</a>
+              <button class="popup__button button button--brown" type="submit" tabindex="5" type="submit" formaction="cart-page.html">Checkout</button>
             </div>
           </form>
         </div>
@@ -690,5 +701,4 @@
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -8,7 +8,9 @@
   padding: 5px 2px;
   margin-right: 31px;
 
-  color: #9B9997;
+  cursor: pointer;
+
+  color: $gray;
 
   &:last-child {
     margin-right: 0;
@@ -17,6 +19,10 @@
   @media (max-width: $mobile-width) {
     margin-right: 36px;
     padding-left: 0;
+  }
+
+  &:hover {
+    color: $brown;
   }
 }
 

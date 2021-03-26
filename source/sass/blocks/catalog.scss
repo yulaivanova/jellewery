@@ -5,7 +5,7 @@
   grid-template-columns: 250px 1fr;
   column-gap: 50px;
 
-  margin-bottom: 75px;
+  margin-bottom: 73px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
@@ -22,7 +22,7 @@
 }
 
 .catalog__slider {
-  padding-bottom: 83px;
+  padding-bottom: 85px;
 
   position: relative;
 
@@ -32,6 +32,7 @@
     max-width: 678px;
     margin: 0 auto;
   }
+
   @media (max-width: $mobile-width) {
     padding-bottom: 77px;
   }
@@ -52,16 +53,24 @@
 }
 
 .catalog__pagination {
-  bottom: 0;
+  bottom: 2px;
+
+  @media (max-width: $mobile-width) {
+    bottom: 20px;
+  }
+}
+
+.catalog__slider--nojs .catalog__button {
+  display: none;
 }
 
 .catalog__button {
   box-sizing: border-box;
 
   position: absolute;
-  bottom: 80px;
+  bottom: 2px;
+
   cursor: pointer;
-  bottom: 0;
 
   z-index: 99;
 

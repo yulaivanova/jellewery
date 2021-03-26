@@ -91,9 +91,8 @@
   }
 }
 
-
-.photos input:checked+.photos__item {
-  z-index: 1; 
+.photos input:checked + .photos__item {
+  z-index: 1;
   opacity: 1;
 }
 

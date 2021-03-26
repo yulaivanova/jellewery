@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid #F6F5F4;
+  border-bottom: 1px solid $light-gray;
 
   @media (max-width: $tablet-width) {
     border-bottom: 0;
@@ -41,6 +41,10 @@
 
 .header__inner--wide .search {
   padding-top: 26px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .header__inner--wide .header__user-link {
@@ -53,7 +57,7 @@
 
 .header__site-nav {
   width: 100%;
-  border-top: 1px solid #f6f5f4;
+  border-top: 1px solid $light-gray;
 
   @media (max-width: $tablet-width) {
     border-top: none;
@@ -73,11 +77,11 @@
 }
 
 .header__logo {
-  padding-top: 30px;
+  margin-top: 30px;
 
   @media (max-width: $tablet-width) {
     margin-left: calc(50% - 33px);
-    padding-top: 0;
+    margin-top: 0;
   }
 
   @media (max-width: $mobile-width) {

@@ -70,10 +70,11 @@
       </section>
 
       <section class="catalog">
+        <h2 class="visually-hidden">Catalog</h2>
         <div class="catalog__filter filter">
           <a href="filter.html" class="filter__link button button--brown">Filter</a>
-          <div class="filter__popup">
-            <button class="popup__toggle popup__toggle--filter" type="button" tabindex="14"><span class="visually-hidden">Закрыть окно</span></button>
+          <div class="filter__popup popup">
+            <button class="popup__toggle popup__toggle--filter" type="button" tabindex="0"><span class="visually-hidden">Закрыть окно</span></button>
             <form action="POST">
               <div class="tabs tabs--nojs">
                 <fieldset class="filter__field tabs__item">
@@ -155,7 +156,7 @@
             </form>
           </div>
         </div>
-        <div class="catalog__slider swiper-container">
+        <div class="catalog__slider catalog__slider--nojs swiper-container">
           <div class="swiper-wrapper">
             <div class="catalog__slider-page swiper-slide" tabindex="0">
               <div class="catalog__item">
@@ -233,7 +234,6 @@
                   </a>
                 </div>
               </div>
-              
               <div class="catalog__item">
                 <div class="product-card">
                   <a href="product-card.html" class="product-card__link">
@@ -534,7 +534,6 @@
                   </a>
                 </div>
               </div>
-            
               <div class="catalog__item">
                 <div class="product-card">
                   <a href="product-card.html" class="product-card__link">
@@ -835,7 +834,6 @@
                   </a>
                 </div>
               </div>
-            
               <div class="catalog__item">
                 <div class="product-card">
                   <a href="product-card.html" class="product-card__link">
@@ -1136,7 +1134,6 @@
                   </a>
                 </div>
               </div>
-            
               <div class="catalog__item">
                 <div class="product-card">
                   <a href="product-card.html" class="product-card__link">
@@ -1437,7 +1434,6 @@
                   </a>
                 </div>
               </div>
-            
               <div class="catalog__item">
                 <div class="product-card">
                   <a href="product-card.html" class="product-card__link">
@@ -1674,9 +1670,12 @@
 
       <section class="popup popup--login">
         <div class="popup__wrapper">
-          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть
+          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="6"><span class="visually-hidden">Закрыть
               окно</span></button>
           <picture>
+            <!-- 1х: 270px; 2x: 540px -->
+            <!-- 1х: 442px; 2x: 884px -->
+            <!-- 1х: 430px; 2x: 860px -->
             <source type="image/webp" media="(max-width: 767px)"
               srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
@@ -1684,7 +1683,7 @@
             <source type="image/webp" srcset="img/login-desktop@1x.webp 1x, img/login-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="img/login-mobile@1x.jpg 1x, img/login-mobile@2x.jpg 2x">
             <source media="(max-width: 1023px)" srcset="img/login-tablet@1x.jpg 1x, img/login-tablet@2x.jpg 2x">
-            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for gallery" width="430"
+            <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" alt="Photo for login popup" width="430"
               height="138">
           </picture>
           <h2>Log In</h2>
@@ -1692,16 +1691,15 @@
             <fieldset class="popup__fieldset">
               <label for="email"><span class="visually-hidden">Your email</span></label>
               <input type="email" name="email" placeholder="Your E-mail" minlength="3" id="email" tabindex="2"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-      
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" tabindex="1" required>
               <label for="password"><span class="visually-hidden">Your password</span></label>
-              <input type="password" name="password" placeholder="Password" id="password" autocomplete="on" tabindex="2" required>
-              <a href="#" class="popup__link popup__link--password">Forgot your password?</a>
+              <input type="password" name="password" placeholder="Password" minlength="6" id="password" autocomplete="on" tabindex="2" required>
+              <a href="#" class="popup__link popup__link--password" tabindex="3">Forgot your password?</a>
             </fieldset>
-            <button class="popup__button button button--brown" type="submit" tabindex="0">Log In</button>
+            <button class="popup__button button button--brown" type="submit" tabindex="4">Log In</button>
             <div class="popup__signUp">
               <p>Don’t have an account?</p>
-              <a href="#" class="popup__link popup__link--signUp">Sign up</a>
+              <a href="#" class="popup__link popup__link--signUp" tabindex="5">Sign up</a>
             </div>
           </form>
         </div>
@@ -1781,5 +1779,4 @@
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>

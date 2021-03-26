@@ -35,7 +35,7 @@
       });
     }
   };
-  if (TABS_LIST) { 
+  if (TABS_LIST) {
     TABS_LIST.classList.remove('tabs--nojs');
     TABS_LIST.addEventListener('click', (event) => {
       const target = event.target;

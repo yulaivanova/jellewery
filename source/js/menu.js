@@ -34,5 +34,4 @@
   window.menu = {
     close: closeMenu,
   };
-
 })();

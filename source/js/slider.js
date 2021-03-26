@@ -1,8 +1,12 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 (function () {
   const ENTER_KEY = 'Enter';
 
   const CATALOG = document.querySelector('.catalog');
+  const CATALOG_SLIDER = document.querySelector('.catalog__slider');
   const SLIDER = document.querySelector('.slider');
   const PRODUCT = document.querySelector('.product__photos');
   const GALLERY_ITEM = document.querySelectorAll('.photos__gallery label');
@@ -43,7 +47,7 @@
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
+              return '<span class="' + className + '">' + (index + 1) + '</span>' + '&nbsp';
             },
           },
         },
@@ -76,7 +80,18 @@
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>' +'&nbsp &nbsp';
+          return '<span class="' + className + '">' + (index + 1) + '</span>' +'&nbsp';
+        },
+      },
+      breakpoints: {
+        320: {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>' + '&nbsp &nbsp';
+            },
+          },
         },
       },
     });
@@ -100,10 +115,12 @@
 
 
   if (CATALOG) {
+    CATALOG_SLIDER.classList.remove('catalog__slider--nojs')
     initCatalogSwiper();
   }
-  
+
   if (SLIDER) {
+    SLIDER.classList.remove('slider--nojs');
     initSwiper();
   }
 
@@ -122,6 +139,4 @@
       }
     });
   });
-
 })();
-

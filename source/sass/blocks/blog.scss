@@ -37,15 +37,11 @@
 
   gap: 30px;
 
-  max-height: 630px;
-
   margin-top: 65px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
     gap: 50px;
-
-    max-height: 100%;
   }
 
   @media (max-width: $mobile-width) {
@@ -121,7 +117,7 @@
     width: 100%;
     max-height: 256px;
   }
-} 
+}
 
 .blog__item--big .blog__text {
   position: absolute;
@@ -188,7 +184,7 @@
   font-size: 14px;
   line-height: 18px;
 
-  color: #9B9997;
+  color: $gray;
 
   margin: 0;
   padding-bottom: 12px;
@@ -225,4 +221,3 @@
     padding-bottom: 37px;
   }
 }
-

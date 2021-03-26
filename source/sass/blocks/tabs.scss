@@ -10,9 +10,9 @@
 .tabs--nojs .tabs__content {
   height: auto;
   padding-bottom: 20px;
+  padding-top: 5px;
 }
 
-.tabs--nojs .tabs__btn::after,
 .tabs--nojs .tabs__btn::after {
   display: none;
 }
@@ -28,6 +28,7 @@
     padding-top: 19px;
     padding-bottom: 44px;
   }
+
   @media (max-width: $mobile-width) {
     padding-top: 5px;
     padding-bottom: 21px;
@@ -62,18 +63,18 @@
   }
 }
 
-.tabs__btn:after {
-  content: '';
+.tabs__btn::after {
+  content: "";
   position: absolute;
 
   border: 1px solid;
   border-color: transparent $brown $brown transparent;
 
   transform: rotate(45deg);
-  transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
+  transition: border-color 0.1s ease-in-out, bottom 0.1s ease-in-out;
 }
 
-.tabs__btn--active:after {
+.tabs__btn--active::after {
   border-color: $brown transparent transparent $brown;
 }
 

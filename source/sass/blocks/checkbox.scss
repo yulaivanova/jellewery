@@ -66,16 +66,12 @@
   }
 }
 
-.checkbox__item label:hover::before {
-  opacity: 0.7;
-}
-
 .checkbox__item label:active::before {
   opacity: 0.7;
 }
 
-.checkbox__item input:focus + label::before {
-  opacity: 0.7;
+.checkbox__item input:focus + label {
+  color: $brown;
 }
 
 .checkbox__item input:checked + label::before {

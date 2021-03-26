@@ -44,7 +44,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  border-top: 1px solid #F6F5F4;
+  border-top: 1px solid $light-gray;
 
   padding: 16px 33px 36px;
 
@@ -131,6 +131,12 @@
   @media (max-width: $mobile-width) {
     padding: 5px 0;
   }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 1px solid $brown;
+  }
 }
 
 .cart__button {
@@ -140,12 +146,14 @@
   background-color: $white;
 
   cursor: pointer;
-  
+
   position: relative;
   margin: 2px auto;
 
   &:hover::before,
-  &:hover::after {
+  &:hover::after,
+  &:focus::after,
+  &:focus::before {
     opacity: 0.7;
   }
 }
@@ -155,8 +163,8 @@
   display: inline-block;
   width: 14px;
   height: 2px;
-  
-  background-color: #9B9997;
+
+  background-color: $gray;
 
   vertical-align: middle;
 }
@@ -166,11 +174,11 @@
   position: absolute;
   top: 8px;
   left: 6px;
-  
+
   width: 14px;
   height: 2px;
 
-  background-color: #9B9997;
+  background-color: $gray;
 }
 
 .cart__button--plus::after {
@@ -178,12 +186,10 @@
   position: absolute;
   top: 2px;
   left: 13px;
-  -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-        transform: translate(-50%);
+  transform: translate(-50%);
 
   width: 2px;
   height: 14px;
 
-  background-color: #9B9997;
+  background-color: $gray;
 }

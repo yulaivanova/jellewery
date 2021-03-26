@@ -34,13 +34,17 @@
   window.menu = {
     close: closeMenu,
   };
-
 })();
+
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 (function () {
   const ENTER_KEY = 'Enter';
 
   const CATALOG = document.querySelector('.catalog');
+  const CATALOG_SLIDER = document.querySelector('.catalog__slider');
   const SLIDER = document.querySelector('.slider');
   const PRODUCT = document.querySelector('.product__photos');
   const GALLERY_ITEM = document.querySelectorAll('.photos__gallery label');
@@ -81,7 +85,7 @@
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
+              return '<span class="' + className + '">' + (index + 1) + '</span>' + '&nbsp';
             },
           },
         },
@@ -114,7 +118,18 @@
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>' +'&nbsp &nbsp';
+          return '<span class="' + className + '">' + (index + 1) + '</span>' +'&nbsp';
+        },
+      },
+      breakpoints: {
+        320: {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>' + '&nbsp &nbsp';
+            },
+          },
         },
       },
     });
@@ -138,10 +153,12 @@
 
 
   if (CATALOG) {
+    CATALOG_SLIDER.classList.remove('catalog__slider--nojs')
     initCatalogSwiper();
   }
-  
+
   if (SLIDER) {
+    SLIDER.classList.remove('slider--nojs');
     initSwiper();
   }
 
@@ -160,9 +177,7 @@
       }
     });
   });
-
 })();
-
 
 /*  eslint no-var: "error"  */
 /*  eslint-env es6  */
@@ -201,7 +216,7 @@
       });
     }
   };
-  if (TABS_LIST) { 
+  if (TABS_LIST) {
     TABS_LIST.classList.remove('tabs--nojs');
     TABS_LIST.addEventListener('click', (event) => {
       const target = event.target;
@@ -214,6 +229,7 @@
   }
 
 })();
+
 /*  eslint no-var: "error"  */
 /*  eslint-env es6  */
 
@@ -233,8 +249,8 @@
     isSupport: isStorageSupport,
     email: storageEmail,
   };
-
 })();
+
 /*  eslint no-var: "error"  */
 /*  eslint-env es6  */
 
@@ -281,7 +297,6 @@
     document.body.style.overflow = 'hidden';
     USER_EMAIL.focus();
     if (USER_EMAIL) {
-      
       USER_EMAIL.value = window.storage.email;
     }
   };
@@ -326,7 +341,7 @@
   }
 
   LOGIN_LINK.addEventListener('click', onLoginLinkClick);
-  LOGIN_LINK_NAV.addEventListener('click', onLoginLinkClick)
+  LOGIN_LINK_NAV.addEventListener('click', onLoginLinkClick);
 
   POPUP_LOGIN.addEventListener('click', onOverlayClick);
   POPUP_LOGIN.addEventListener('click', onToggleClick);
@@ -337,13 +352,13 @@
 
     PRODUCT_BTN.addEventListener('click', function (evt) {
       evt.preventDefault();
+      PRODUCT_BTN.blur();
       document.addEventListener('keydown', onEscPress);
       openCartPopup();
     });
   }
 
   LOGIN_FORM.addEventListener('submit', function (evt) {
-  
     if (window.storage.isSupport) {
       localStorage.setItem('userEmail', USER_EMAIL.value);
     }
@@ -352,8 +367,8 @@
     closePopup();
   });
 
-
 })();
+
 /*  eslint no-var: "error"  */
 /*  eslint-env es6  */
 
@@ -371,8 +386,6 @@
     const TABS = document.querySelector('.product__info');
     const TAB_CONTENT = document.querySelectorAll('.product__content');
     let tabName;
-
-    //TABS.classList.remove('tabs--nojs');
 
     const onTabsClick = function () {
       TAB_NAV.forEach(item => {
@@ -407,15 +420,13 @@
         })
       }
     };
-    
+
     if (TABS) {
       onTabsClick();
     }
-
   })();
-
-
 })();
+
 /*  eslint no-var: 'error'  */
 /*  eslint-env es6  */
 
@@ -437,9 +448,9 @@
     if (COUNTER.value >= 0) {
       let sum = 0;
       sum = COUNTER.value * priceValue;
-      TOTAL.textContent = sum; 
+      TOTAL.textContent = sum;
     }
-  };
+  }
 
   if (POPUP) {
     COUNTER_INPUT.addEventListener('change', () => {

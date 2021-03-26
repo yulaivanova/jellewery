@@ -19,9 +19,9 @@
     if (COUNTER.value >= 0) {
       let sum = 0;
       sum = COUNTER.value * priceValue;
-      TOTAL.textContent = sum; 
+      TOTAL.textContent = sum;
     }
-  };
+  }
 
   if (POPUP) {
     COUNTER_INPUT.addEventListener('change', () => {
