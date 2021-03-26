@@ -91,12 +91,11 @@
   }
 }
 
-
-.photos input:checked+.photos__item {
-  z-index: 1; 
+.photos input:checked + .photos__item {
+  z-index: 1;
   opacity: 1;
 }
 
 .photos__pagination {
-  bottom: 5px;
+  bottom: 9px;
 }

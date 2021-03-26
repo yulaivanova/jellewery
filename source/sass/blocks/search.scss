@@ -19,10 +19,16 @@
 
     position: absolute;
     left: 12px;
-    top: 12px;
+    top: -9px;
 
     width: 16px;
     height: 16px;
+  }
+}
+
+.search label {
+  @media (max-width: $tablet-width) {
+    position: relative;
   }
 }
 
@@ -32,6 +38,12 @@
   width: 100%;
 
   padding: 5px 5px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 1px solid $brown;
+  }
 
   &::placeholder {
     font-size: 14px;
@@ -46,11 +58,12 @@
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 21px;
     padding: 12px 12px 12px 32px;
-  }
 
-  &:focus,
-  &:active {
-    border: 1px solid $brown;
-    outline: none;
+    &:focus,
+    &:hover,
+    &:active {
+      outline: none;
+      opacity: 0.7;
+    }
   }
 }

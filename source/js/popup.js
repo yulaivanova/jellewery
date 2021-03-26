@@ -44,7 +44,6 @@
     document.body.style.overflow = 'hidden';
     USER_EMAIL.focus();
     if (USER_EMAIL) {
-      
       USER_EMAIL.value = window.storage.email;
     }
   };
@@ -89,7 +88,7 @@
   }
 
   LOGIN_LINK.addEventListener('click', onLoginLinkClick);
-  LOGIN_LINK_NAV.addEventListener('click', onLoginLinkClick)
+  LOGIN_LINK_NAV.addEventListener('click', onLoginLinkClick);
 
   POPUP_LOGIN.addEventListener('click', onOverlayClick);
   POPUP_LOGIN.addEventListener('click', onToggleClick);
@@ -100,13 +99,13 @@
 
     PRODUCT_BTN.addEventListener('click', function (evt) {
       evt.preventDefault();
+      PRODUCT_BTN.blur();
       document.addEventListener('keydown', onEscPress);
       openCartPopup();
     });
   }
 
   LOGIN_FORM.addEventListener('submit', function (evt) {
-  
     if (window.storage.isSupport) {
       localStorage.setItem('userEmail', USER_EMAIL.value);
     }
@@ -114,6 +113,5 @@
     evt.preventDefault();
     closePopup();
   });
-
 
 })();

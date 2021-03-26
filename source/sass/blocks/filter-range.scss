@@ -1,14 +1,28 @@
 .filter-range {
   padding-right: 25px;
   padding-left: 25px;
+
+  @media (max-width: $mobile-width) {
+    box-sizing: border-box;
+  }
 }
 
 .filter-range__controls {
-  margin: 29px 0 17px;
+  margin: 5px 0 13px;
   position: relative;
 
   height: 1px;
-  background-color:#F0EAE4;
+  background-color: #f0eae4;
+
+  @media (max-width: $tablet-width) {
+    margin: 14px 0 13px 26px;
+    width: 304px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+    margin: 11px 0 13px;
+  }
 }
 
 .filter-range__bar {
@@ -20,7 +34,15 @@
   width: calc(100% - 80px);
 
   cursor: pointer;
-} 
+
+  @media (max-width: $tablet-width) {
+    width: calc(100% - 120px);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: calc(100% - 100px);
+  }
+}
 
 .filter-range__toggle {
   position: absolute;
@@ -32,14 +54,37 @@
   height: 15px;
   background-color: $brown;
   border-radius: 50%;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+
+    top: -9px;
+  }
+
+  &:hover {
+    filter: brightness(70%);
+  }
 }
 
 .filter-range__toggle--low {
   left: 45px;
+
+  @media (max-width: $mobile-width) {
+    left: 30px;
+  }
 }
 
 .filter-range__toggle--high {
   right: 35px;
+
+  @media (max-width: $tablet-width) {
+    right: 66px;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: 44px;
+  }
 }
 
 .filter-range__price {
@@ -47,9 +92,17 @@
   flex-direction: row;
   justify-content: space-between;
 
-  padding-left: 38px;
-  padding-right: 25px;
-  padding-bottom: 23px;
+  padding-left: 35px;
+  padding-right: 7px;
+  padding-bottom: 17px;
+
+  @media (max-width: $tablet-width) {
+    padding: 2px 102px 36px 62px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 2px 19px 27px 22px;
+  }
 }
 
 .filter-range__price label {

@@ -16,8 +16,6 @@
     const TAB_CONTENT = document.querySelectorAll('.product__content');
     let tabName;
 
-    //TABS.classList.remove('tabs--nojs');
-
     const onTabsClick = function () {
       TAB_NAV.forEach(item => {
         item.addEventListener('click', selectTabNav);
@@ -51,12 +49,9 @@
         })
       }
     };
-    
+
     if (TABS) {
       onTabsClick();
     }
-
   })();
-
-
 })();

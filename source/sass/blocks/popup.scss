@@ -1,4 +1,5 @@
-.popup {
+.popup--login,
+.popup--cart {
   position: fixed;
   display: none;
   top: 0;
@@ -7,6 +8,7 @@
   height: 100%;
   z-index: 90;
 }
+
 
 .popup--login {
   background-color: rgba(256, 256, 256, 0.96);
@@ -25,7 +27,7 @@
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    background-color: #F0EAE4;
+    background-color: #f0eae4;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -42,14 +44,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 50;
+  z-index: 99;
 
   box-sizing: border-box;
 
   background-color: $white;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
 
-  padding-top: 55px;
+  padding-top: 47px;
   padding-bottom: 55px;
 
   @media (max-width: $tablet-width) {
@@ -59,7 +61,7 @@
   @media (max-width: $mobile-width) {
     width: 290px;
 
-    padding-top: 45px;
+    padding-top: 38px;
     padding-bottom: 45px;
 
     min-height: 519px;
@@ -69,18 +71,18 @@
 .popup--login .popup__wrapper {
   position: fixed;
   width: 430px;
-  min-height: 439px;
+  min-height: 586px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 50;
 
-  background-color: #F0EAE4;
-  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+  background-color: #f0eae4;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
 
   box-sizing: border-box;
 
-  padding-bottom: 60px;
+  padding-bottom: 0;
 
   @media (max-width: $tablet-width) {
     width: 442px;
@@ -88,7 +90,6 @@
 
   @media (max-width: $mobile-width) {
     width: 270px;
-    padding-bottom: 45px;
     min-height: 470px;
   }
 }
@@ -126,10 +127,10 @@
   font-size: 26px;
   line-height: 34px;
 
-  padding-bottom: 55px;
+  padding-bottom: 38px;
 
   @media (max-width: $mobile-width) {
-    padding: 0 40px 40px;
+    padding: 0 40px 26px;
     font-size: 24px;
     line-height: 29px;
   }
@@ -140,11 +141,13 @@
   line-height: 44px;
   font-family: $CormorantGaramond;
 
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 45px;
+  padding-bottom: 24px;
 
   @media (max-width: $mobile-width) {
-    padding-top: 45px;
+    padding-top: 32px;
+    padding-bottom: 18px;
+
     font-size: 24px;
     line-height: 31px;
   }
@@ -155,22 +158,30 @@
 }
 
 .popup--login .popup__fieldset {
-  padding: 0 45px;
+  padding: 0 43px;
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 13px;
+  }
 }
 
-.popup--login  input {
+.popup--login input {
   background-color: #f0eae4;
   border: 0;
-  border-bottom: 1px solid #1D1613;
+  border-bottom: 1px solid #1d1613;
 
-  padding: 10px 5px;
+  padding: 10px 0;
 
   width: 100%;
 
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -180,7 +191,11 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    color: #9B9997;;
+    color: $gray;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
   }
 }
 
@@ -197,11 +212,11 @@
 .popup__link--password {
   font-size: 12px;
   line-height: 18px;
-  color: #9B9997;
+  color: $gray;
 
   text-align: right;
 
-  padding-top: 10px;
+  padding-top: 4px;
 }
 
 .popup__link--signUp {
@@ -213,11 +228,12 @@
 .popup--login .popup__button {
   display: block;
   width: 340px;
-  padding: 28px 0;
-  margin: 40px auto 20px;
+  padding: 25px 0;
+  margin: 45px auto 15px;
 
   @media (max-width: $mobile-width) {
     width: 240px;
+    margin-top: 37px;
   }
 }
 
@@ -226,7 +242,16 @@
   flex-direction: row;
 
   align-items: center;
-  justify-content: center;
+
+  padding-left: 98px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 109px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 23px;
+  }
 }
 
 .popup__signUp p {
@@ -235,11 +260,14 @@
   display: flex;
   align-items: center;
 
-  color: #9B9997;
+  color: $gray;
 
   margin: 0;
-  padding-right: 5px;
-  
+  padding-right: 8px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 4px;
+  }
 }
 
 .popup__toggle {
@@ -265,8 +293,8 @@
 }
 
 .popup__toggle--popup {
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 18px;
   display: block;
 
   width: 20px;
@@ -281,15 +309,15 @@
     top: 8px;
     right: 3px;
 
-    width: 14px;
+    width: 17px;
     height: 2px;
 
     background-color: $black;
   }
 
   @media (max-width: $mobile-width) {
-    top: 15px;
-    right: 15px;
+    top: 13px;
+    right: 11px;
   }
 }
 
@@ -298,7 +326,7 @@
 
   @media (max-width: $tablet-width) {
     display: block;
-    top: -11px;
+    top: -17px;
     right: -15px;
     width: 32px;
     height: 32px;
@@ -319,6 +347,7 @@
 
   @media (max-width: $mobile-width) {
     top: -17px;
+    right: -5px;
   }
 }
 
@@ -353,15 +382,40 @@
 
   @media (max-width: $tablet-width) {
     width: 206px;
+    padding: 22px 0;
   }
 
   @media (max-width: $mobile-width) {
     width: 260px;
-    padding: 22px 0;
+    padding: 24px 0;
 
     &:first-child {
       margin-bottom: 20px;
     }
   }
-  
+}
+
+.popup--login .popup__toggle--popup {
+  @media (max-width: $tablet-width) {
+    width: 25px;
+    height: 25px;
+
+    right: 15px;
+    top: 21px;
+
+    &::before,
+    &::after {
+      width: 24px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 13px;
+    right: 10px;
+
+    &::before,
+    &::after {
+      width: 17px;
+    }
+  }
 }

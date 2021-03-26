@@ -29,18 +29,17 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 50px;
+    padding-bottom: 41px;
     padding-right: 0;
 
     &:last-child {
       padding-right: 0;
     }
   }
-
 }
 
 .terms__item {
-  padding-bottom: 30px;
+  padding-bottom: 21px;
 
   &:last-child {
     padding-bottom: 0;

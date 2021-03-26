@@ -17,5 +17,4 @@
     isSupport: isStorageSupport,
     email: storageEmail,
   };
-
 })();

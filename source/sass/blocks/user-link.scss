@@ -4,7 +4,7 @@
 }
 
 .user-link__item {
-  margin-right: 35px;
+  margin-right: 38px;
 
   font-size: 14px;
   line-height: 21px;
@@ -37,6 +37,10 @@
     display: block;
     fill: none;
     stroke: $text-color;
+    stroke-width: 2px;
+
+    width: 23px;
+    height: 20px;
   }
 }
 

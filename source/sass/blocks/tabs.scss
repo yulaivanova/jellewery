@@ -10,9 +10,9 @@
 .tabs--nojs .tabs__content {
   height: auto;
   padding-bottom: 20px;
+  padding-top: 5px;
 }
 
-.tabs--nojs .tabs__btn::after,
 .tabs--nojs .tabs__btn::after {
   display: none;
 }
@@ -22,11 +22,25 @@
 }
 
 .tabs__content--active.questions__content {
-  padding-bottom: 49px;
+  padding-bottom: 41px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 44px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 5px;
+    padding-bottom: 21px;
+  }
 }
 
 .tabs__content--active.filter__content {
   padding-top: 3px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 4px;
+  }
 }
 
 .tabs__btn {
@@ -49,25 +63,45 @@
   }
 }
 
-.tabs__btn:after {
-  content: '';
+.tabs__btn::after {
+  content: "";
   position: absolute;
 
   border: 1px solid;
   border-color: transparent $brown $brown transparent;
 
   transform: rotate(45deg);
-  transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
+  transition: border-color 0.1s ease-in-out, bottom 0.1s ease-in-out;
 }
 
-.tabs__btn--active:after {
+.tabs__btn--active::after {
   border-color: $brown transparent transparent $brown;
 }
 
 .tabs__btn--active.questions__title {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.tabs__btn--active.filter__toggle {
+  padding-bottom: 21px;
+}
+
+.tabs__btn--active.filter__toggle::after {
+  top: calc(50% - 2px);
+
+  @media (max-width: $tablet-width) {
+    top: calc(50% + 3px);
+  }
+
+  @media (max-width: $mobile-width) {
+    top: calc(50% - 1px);
+  }
 }
 
 .tabs__btn--active.questions__title::after {
-  top: 50%;
+  top: 70%;
+
+  @media (max-width: $mobile-width) {
+    top: 38%;
+  }
 }

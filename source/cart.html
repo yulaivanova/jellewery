@@ -65,6 +65,7 @@
     </header>
     <main>
       <section class="popup popup--nojs popup--cart">
+        <h1 class="visually-hidden">Add item page</h1>
         <div class="popup__wrapper">
           <button class="popup__toggle popup__toggle--popup" type="button" tabindex="0"><span class="visually-hidden">Закрыть
               окно</span></button>
@@ -72,6 +73,9 @@
           <form action="#">
             <fieldset class="popup__fieldset cart">
               <div class="cart__img-wrapper">
+                <!-- 1х: 70px; 2x: 140px -->
+                <!-- 1х: 88px; 2x: 176px -->
+                <!-- 1х: 84px; 2x: 168px -->
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/cart-mobile@1x.webp 1x, img/cart-mobile@2x.webp 2x">
@@ -106,7 +110,7 @@
             </fieldset>
             <div class="popup__btn-wrapper">
               <a href="catalog.html" class="popup__button button button--white" tabindex="0">Continue shopping</a>
-              <button class="popup__button button button--brown" type="submit" tabindex="0">Checkout</button>
+              <button class="popup__button button button--brown" type="submit" formaction="cart-page.html" tabindex="0">Checkout</button>
             </div>
           </form>
         </div>
@@ -185,5 +189,4 @@
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>
