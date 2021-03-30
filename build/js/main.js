@@ -9,6 +9,7 @@
   const HEADER = document.querySelector('.header');
 
   NAV_MAIN.classList.remove('site-nav--nojs');
+  HEADER.classList.remove('header--nojs');
   closeMenu();
 
   function closeMenu() {
@@ -123,6 +124,7 @@
       },
       breakpoints: {
         320: {
+          slidesPerView: 1,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -315,7 +317,7 @@
 
   const onOverlayClick = function (event) {
     const target = event.target;
-    if (target.classList.contains('filter--opened') || target.classList.contains('popup--opened')) {
+    if (target.classList.contains('filter__popup') || target.classList.contains('popup--opened')) {
       closePopup();
       document.removeEventListener('keydown', onEscPress);
     }

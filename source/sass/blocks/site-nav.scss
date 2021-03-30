@@ -57,8 +57,16 @@
   padding-bottom: 15px;
   margin-right: 35px;
 
+  &:first-child {
+    margin-left: 35px;
+
+    @media (max-width: $tablet-width) {
+      margin-left: 0;
+    }
+  }
+
   &:nth-child(5n) {
-    margin-right: 0;
+    margin-right: 35px;
 
     @media (max-width: $tablet-width) {
       padding-bottom: 41px;

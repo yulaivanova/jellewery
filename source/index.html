@@ -20,7 +20,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header header--opened">
+    <header class="header header--nojs header--opened">
       <div class="header__inner">
         <form action="#" class="search">
           <label for="usersearch">
@@ -142,7 +142,7 @@
                     <source media="(max-width: 767px)"
                       srcset="img/gold-layered-necklace-mobile@1x.jpg 1x, img/gold-layered-necklace-mobile@2x.jpg 2x">
                     <source media="(max-width: 1023px)"
-                      srcset="img/gold-layered-necklace-tablet@1x.jpg 1x, img/pgold-layered-necklace-tablet@2x.jpg 2x">
+                      srcset="img/gold-layered-necklace-tablet@1x.jpg 1x, img/gold-layered-necklace-tablet@2x.jpg 2x">
                     <img src="img/gold-layered-necklace-desktop@1x.jpg"
                       srcset="img/gold-layered-necklace-desktop@2x.jpg 2x" alt="Gold chain" width="270" height="284">
                   </picture>
@@ -702,7 +702,7 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form action="#">
             <label for="user-email">
-              <input type="email" name="user-email" id="user-email" placeholder="Your E-mail">
+              <input type="email" name="user-email" id="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required>
             </label>
             <button type="submit" class="signUp-form__btn">
               Sign Up
