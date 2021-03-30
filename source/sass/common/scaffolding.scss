@@ -12,6 +12,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input {
+  border-radius: 0;
+}
+
 input::-webkit-appearance,
 textarea::-webkit-appearance,
 select::-webkit-appearance {

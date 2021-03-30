@@ -27,6 +27,7 @@
   position: relative;
 
   z-index: 20;
+  max-width: 870px;
 
   @media (max-width: $tablet-width) {
     max-width: 678px;
@@ -35,6 +36,7 @@
 
   @media (max-width: $mobile-width) {
     padding-bottom: 77px;
+    width: 290px;
   }
 }
 

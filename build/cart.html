@@ -20,7 +20,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header header--opened">
+    <header class="header header--nojs header--opened">
       <div class="header__inner">
         <form action="#" class="search">
           <label for="usersearch">
@@ -119,7 +119,7 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form action="#">
             <label for="user-email">
-              <input type="email" name="user-email" id="user-email" placeholder="Your E-mail">
+              <input type="email" name="user-email" id="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
             </label>
             <button type="submit" class="signUp-form__btn">
               Sign Up

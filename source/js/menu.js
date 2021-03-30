@@ -9,6 +9,7 @@
   const HEADER = document.querySelector('.header');
 
   NAV_MAIN.classList.remove('site-nav--nojs');
+  HEADER.classList.remove('header--nojs');
   closeMenu();
 
   function closeMenu() {

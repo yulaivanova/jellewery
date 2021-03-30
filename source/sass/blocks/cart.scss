@@ -160,13 +160,14 @@
 
 .cart__button--minus::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 6px;
+
   width: 14px;
   height: 2px;
 
   background-color: $gray;
-
-  vertical-align: middle;
 }
 
 .cart__button--plus::before {
