@@ -32,6 +32,7 @@
     }
   });
 
+
   window.menu = {
     close: closeMenu,
   };
@@ -104,7 +105,7 @@
         },
       },
     });
-  };
+  }
 
   function initCatalogSwiper() {
     let swiper = new Swiper('.catalog__slider', {
@@ -135,7 +136,7 @@
         },
       },
     });
-  };
+  }
 
   function initProductSwiper() {
     let swiper = new Swiper('.photos__slider', {
@@ -151,7 +152,7 @@
         },
       },
     });
-  };
+  }
 
 
   if (CATALOG) {
@@ -198,7 +199,7 @@
 
   const openTabs = (button, dropDown) => {
     closeAllDrops();
-    dropDown.style.height = dropDown.scrolHeight + 'px';
+    dropDown.style.height = dropDown.scrollHeight + 'px';
     button.classList.add('tabs__btn--active');
     dropDown.classList.add('tabs__content--active');
   };
@@ -444,7 +445,7 @@
   const COUNTER_INPUT = document.querySelector('.cart__counter input');
   const POPUP = document.querySelector('.popup--cart');
 
-  function calculateСost() {
+  function calculateCost() {
     let priceValue = +PRICE.textContent;
     TOTAL_COUNT.textContent = COUNTER.value;
     if (COUNTER.value >= 0) {
@@ -456,20 +457,20 @@
 
   if (POPUP) {
     COUNTER_INPUT.addEventListener('change', () => {
-      calculateСost();
+      calculateCost();
     });
 
     PLUS.addEventListener('click', function (evt) {
       evt.preventDefault();
       COUNTER.value++;
-      calculateСost();
+      calculateCost();
     });
 
     MINUS.addEventListener('click', function (evt) {
       evt.preventDefault();
       if (COUNTER.value > 0) {
         COUNTER.value = COUNTER.value - 1;
-        calculateСost();
+        calculateCost();
       }
     });
   }

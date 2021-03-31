@@ -31,12 +31,14 @@
 
   @media (max-width: $tablet-width) {
     max-width: 678px;
+
     margin: 0 auto;
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 77px;
     width: 290px;
+
+    padding-bottom: 77px;
   }
 }
 

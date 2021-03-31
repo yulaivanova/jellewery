@@ -65,7 +65,7 @@
         },
       },
     });
-  };
+  }
 
   function initCatalogSwiper() {
     let swiper = new Swiper('.catalog__slider', {
@@ -96,7 +96,7 @@
         },
       },
     });
-  };
+  }
 
   function initProductSwiper() {
     let swiper = new Swiper('.photos__slider', {
@@ -112,7 +112,7 @@
         },
       },
     });
-  };
+  }
 
 
   if (CATALOG) {

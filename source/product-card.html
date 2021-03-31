@@ -47,7 +47,7 @@
         </div>
       </div>
       <nav class="header__site-nav site-nav site-nav--opened site-nav--nojs">
-        <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button type="button" class="site-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="site-nav__list">
           <li class="site-nav__item"><a href="#" class="site-nav__link">What’s new</a></li>
           <li class="site-nav__item"><a href="#" class="site-nav__link">Chokers</a></li>
@@ -72,7 +72,7 @@
             <div class="photos__item">
               <picture>
                 <source type="image/webp" srcset="img/gold-necklace-1-full.webp">
-                <img src="img/gold-necklace-1-full.jpg" alt="gold necklace photo" width="470" height="435" />
+                <img src="img/gold-necklace-1-full.jpg" alt="gold necklace photo" width="470" height="435">
               </picture>
             </div>
             <label class="photos__view" for="radiogal1" tabindex="0">
@@ -121,7 +121,7 @@
             <div class="photos__item">
               <picture>
                 <source type="image/webp" srcset="img/gold-necklace-3-full.webp">
-                <img src="img/gold-necklace-3-full.jpg" alt="gold necklace photo" width="470" height="435" />
+                <img src="img/gold-necklace-3-full.jpg" alt="gold necklace photo" width="470" height="435">
               </picture>
             </div>
             <label class="photos__view" for="radiogal3" tabindex="0">
@@ -129,7 +129,7 @@
                 <!-- 1х: 97px; 2x: 194px -->
                 <!-- 1х: 100px; 2x: 250px -->
                 <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/pgold-necklace-preview3-tablet@1x.webp 1x, img/gold-necklace-preview3-tablet@2x.webp 2x">
+                  srcset="img/gold-necklace-preview3-tablet@1x.webp 1x, img/gold-necklace-preview3-tablet@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/gold-necklace-preview3-desktop@1x.webp 1x, img/gold-necklace-preview3-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)"
@@ -542,7 +542,7 @@
 
       <section class="popup popup--login">
         <div class="popup__wrapper">
-          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="6"><span class="visually-hidden">Закрыть
+          <button type="button" class="popup__toggle popup__toggle--popup" tabindex="6"><span class="visually-hidden">Закрыть
               окно</span></button>
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
@@ -568,7 +568,7 @@
               <input type="password" name="password" placeholder="Password" minlength="6" id="password" tabindex="2" autocomplete="on" required>
               <a href="#" class="popup__link popup__link--password" tabindex="3">Forgot your password?</a>
             </fieldset>
-            <button class="popup__button button button--brown" type="submit" tabindex="4">Log In</button>
+            <button type="submit" class="popup__button button button--brown" tabindex="4">Log In</button>
             <div class="popup__signUp">
               <p>Don’t have an account?</p>
               <a href="#" class="popup__link popup__link--signUp" tabindex="5">Sign up</a>
@@ -579,7 +579,7 @@
 
       <section class="popup popup--cart">
         <div class="popup__wrapper">
-          <button class="popup__toggle popup__toggle--popup" type="button" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
+          <button type="button" class="popup__toggle popup__toggle--popup" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
           <h2>The item was added to your cart</h2>
           <form action="#">
             <fieldset class="popup__fieldset cart">
@@ -605,12 +605,12 @@
               </div>
               <div class="cart__counter">
                 <label for="item-amount"><span class="visually-hidden">Количество товара</span></label>
-                <button class="cart__button cart__button--plus" type="button" name="plus-item" tabindex="1">
+                <button type="button" class="cart__button cart__button--plus" name="plus-item" tabindex="1">
                   <span class="visually-hidden">Увеличить количество товара на 1</span>
                 </button>
                 <input type="text" name="amount-of-items" value="1" id="item-amount" pattern="[0-9]{1,2}"
                   title="Количество товара не более 99" tabindex="2">
-                <button class="cart__button cart__button--minus" type="button" name="minus-item" tabindex="3">
+                <button type="button" class="cart__button cart__button--minus" name="minus-item" tabindex="3">
                   <span class="visually-hidden">Уменьшить количество товара на 1</span>
                 </button>
               </div>
@@ -621,7 +621,7 @@
             </fieldset>
             <div class="popup__btn-wrapper">
               <a href="catalog.html" class="popup__button button button--white" tabindex="4">Continue shopping</a>
-              <button class="popup__button button button--brown" type="submit" tabindex="5" type="submit" formaction="cart-page.html">Checkout</button>
+              <button type="submit" class="popup__button button button--brown" tabindex="5" type="submit" formaction="cart-page.html">Checkout</button>
             </div>
           </form>
         </div>

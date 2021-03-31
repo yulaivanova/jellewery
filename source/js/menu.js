@@ -32,6 +32,7 @@
     }
   });
 
+
   window.menu = {
     close: closeMenu,
   };

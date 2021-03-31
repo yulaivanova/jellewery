@@ -15,7 +15,7 @@
 
   const openTabs = (button, dropDown) => {
     closeAllDrops();
-    dropDown.style.height = dropDown.scrolHeight + 'px';
+    dropDown.style.height = dropDown.scrollHeight + 'px';
     button.classList.add('tabs__btn--active');
     dropDown.classList.add('tabs__content--active');
   };

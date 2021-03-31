@@ -1,6 +1,7 @@
 .photos__gallery {
   position: relative;
   display: grid;
+
   width: 600px;
   user-select: none;
 
@@ -40,14 +41,15 @@
 .photos__item {
   grid-column: 2/3;
   grid-row: 1/4;
+
   height: 435px;
   width: 100%;
 
   @media (max-width: $tablet-width) {
     grid-row: 1/2;
     grid-column: 1/4;
-    max-height: 80vh;
 
+    max-height: 80vh;
     height: 286px;
   }
 }
@@ -72,12 +74,14 @@
   z-index: -1;
   top: 0;
   left: 0;
+
   opacity: 0;
   transition: opacity 0.5s;
 }
 
 .photos__view {
   cursor: pointer;
+
   max-height: 125px;
 
   &:hover,

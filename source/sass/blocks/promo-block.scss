@@ -33,9 +33,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 60px;
-
     background-image: url("../img/intro-mobile@1x.jpg");
+
+    margin-bottom: 60px;
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
       background-image: url("../img/intro-mobile@2x.jpg");
@@ -69,6 +69,7 @@
 
 .promo-block--catalog {
   height: 261px;
+
   filter: none;
   background-image: url("../img/intro-catalog-desktop@1x.jpg");
 
@@ -79,9 +80,9 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 50px;
-
     background-image: url("../img/intro-catalog-tablet@1x.jpg");
+
+    margin-bottom: 50px;
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
       background-image: url("../img/intro-catalog-tablet@2x.jpg");
@@ -89,8 +90,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 40px;
     background-image: url("../img/intro-catalog-mobile@1x.jpg");
+
+    margin-bottom: 40px;
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
       background-image: url("../img/intro-catalog-mobile@2x.jpg");
@@ -155,14 +157,13 @@
 
 .promo-block h2 {
   margin: 0;
+  padding-top: 182px;
 
   font-size: 45px;
   line-height: 53px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-weight: 700;
-
-  padding-top: 182px;
 
   @media (max-width: $tablet-width) {
     padding-top: 184px;
