@@ -2,12 +2,11 @@
   position: relative;
 
   max-width: 1170px;
-  margin: 0 auto;
 
   text-align: center;
 
   padding-bottom: 60px;
-  margin-bottom: 116px;
+  margin: 0 auto 116px;
 
   @media (max-width: 1200px) {
     width: 980px;
@@ -130,6 +129,7 @@
 .slider__button--prev {
   transform: matrix(-1, 0, 0, 1, 0, 0);
   background-image: url("../img/arrow-black-icon.svg");
+
   left: -19px;
   top: 29px;
 
@@ -145,6 +145,7 @@
 
 .slider__button--next {
   right: -4px;
+
   background-image: url("../img/arrow-black-icon.svg");
 
   @media (max-width: $tablet-width) {

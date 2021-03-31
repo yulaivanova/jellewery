@@ -4,8 +4,10 @@
   display: none;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   z-index: 90;
 }
 
@@ -39,10 +41,12 @@
 
 .popup--cart .popup__wrapper {
   position: fixed;
-  width: 500px;
-  min-height: 439px;
   top: 50%;
   left: 50%;
+
+  width: 500px;
+  min-height: 439px;
+
   transform: translate(-50%, -50%);
   z-index: 99;
 
@@ -60,20 +64,22 @@
 
   @media (max-width: $mobile-width) {
     width: 290px;
+    min-height: 519px;
 
     padding-top: 38px;
     padding-bottom: 45px;
-
-    min-height: 519px;
   }
 }
 
 .popup--login .popup__wrapper {
   position: fixed;
+
   width: 430px;
   min-height: 586px;
+
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
   z-index: 50;
 
@@ -97,6 +103,7 @@
 .popup--nojs .popup__wrapper {
   position: static;
   display: block;
+
   top: 0;
   transform: none;
 
@@ -119,8 +126,9 @@
 
 .popup h2 {
   font-family: $CormorantGaramond;
-  margin: 0;
   text-align: center;
+
+  margin: 0;
 }
 
 .popup--cart h2 {
@@ -131,6 +139,7 @@
 
   @media (max-width: $mobile-width) {
     padding: 0 40px 26px;
+
     font-size: 24px;
     line-height: 29px;
   }
@@ -177,10 +186,9 @@
   border: 0;
   border-bottom: 1px solid #1d1613;
 
-  padding: 10px 0;
-
   width: 100%;
 
+  padding: 10px 0;
   margin-bottom: 27px;
 
   &:last-of-type {
@@ -228,11 +236,13 @@
 .popup--login .popup__button {
   display: block;
   width: 340px;
+
   padding: 25px 0;
   margin: 45px auto 15px;
 
   @media (max-width: $mobile-width) {
     width: 240px;
+
     margin-top: 37px;
   }
 }
@@ -257,6 +267,7 @@
 .popup__signUp p {
   font-size: 14px;
   line-height: 21px;
+
   display: flex;
   align-items: center;
 
@@ -328,6 +339,7 @@
     display: block;
     top: -17px;
     right: -15px;
+
     width: 32px;
     height: 32px;
 
@@ -339,6 +351,7 @@
   &::after {
     top: 14px;
     right: 7px;
+
     width: 18px;
     height: 2px;
 
@@ -371,22 +384,26 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+
     margin: 0 15px;
   }
 }
 
 .popup__btn-wrapper .popup__button {
   padding: 12px 26px;
+
   width: 200px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     width: 206px;
+
     padding: 22px 0;
   }
 
   @media (max-width: $mobile-width) {
     width: 260px;
+
     padding: 24px 0;
 
     &:first-child {

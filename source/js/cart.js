@@ -13,7 +13,7 @@
   const COUNTER_INPUT = document.querySelector('.cart__counter input');
   const POPUP = document.querySelector('.popup--cart');
 
-  function calculateСost() {
+  function calculateCost() {
     let priceValue = +PRICE.textContent;
     TOTAL_COUNT.textContent = COUNTER.value;
     if (COUNTER.value >= 0) {
@@ -25,20 +25,20 @@
 
   if (POPUP) {
     COUNTER_INPUT.addEventListener('change', () => {
-      calculateСost();
+      calculateCost();
     });
 
     PLUS.addEventListener('click', function (evt) {
       evt.preventDefault();
       COUNTER.value++;
-      calculateСost();
+      calculateCost();
     });
 
     MINUS.addEventListener('click', function (evt) {
       evt.preventDefault();
       if (COUNTER.value > 0) {
         COUNTER.value = COUNTER.value - 1;
-        calculateСost();
+        calculateCost();
       }
     });
   }

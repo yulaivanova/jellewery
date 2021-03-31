@@ -2,6 +2,7 @@
   @include center-block;
 
   max-width: 1000px;
+
   margin-bottom: 100px;
 
   @media (max-width: $tablet-width) {
@@ -107,6 +108,7 @@
 .questions__title::after {
   right: 50px;
   top: calc(50% - 11px);
+
   width: 10px;
   height: 10px;
 

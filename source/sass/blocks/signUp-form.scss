@@ -3,6 +3,7 @@
 
   @media (max-width: $tablet-width) {
     min-width: 560px;
+
     padding-right: 60px;
     margin-bottom: 40px;
   }
@@ -10,6 +11,7 @@
   @media (max-width: $mobile-width) {
     min-width: auto;
     width: 100%;
+
     padding-right: 0;
   }
 }
@@ -48,6 +50,7 @@
 
 .signUp-form form {
   border-bottom: 1px solid $white;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,6 +68,7 @@
   border: none;
 
   color: $white;
+
   padding: 10px 0;
 
   &::placeholder {
@@ -112,6 +116,7 @@
 
 .signUp-form__icon {
   padding-left: 14px;
+
   position: absolute;
   top: 6px;
 }
